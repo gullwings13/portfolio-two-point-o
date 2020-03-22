@@ -7,6 +7,18 @@ import stocplay from '../images/stocplay.png'
 import rmtradinggame from '../images/rmtradinggame.png'
 import njtransit from '../images/njtransit.png'
 import yaywalker from '../images/yaywalker.png'
+import ProjectCard from './ProjectCard'
+
+
+const projects = [
+    {
+        title: "Space Jump Fun",
+        image: spacejumpfun,
+        description: `A simple platformer making use of c# interfaces. Give it a try on <a className="font-bold" href="https://tsh.itch.io/space-jump-fun" ><span className="text-purple-600 hover:underline">itch.io <i className="fab fa-itch-io text-purple-600"></i></span></a>`,
+        tags: ["#csharp", "#unity", "#interfaces"]
+    }
+]
+
 
 export default class Projects extends Component
 {
@@ -14,12 +26,16 @@ export default class Projects extends Component
     {
         return (
             <React.Fragment>
-                <div className="text-2xl">I have been making my own prototypes and games for the last several years in my spare time.
+                <div className="text-2xl mt-4 text-justify">I have been making my own prototypes and games for the last several years in my spare time.
 
                 </div>
                 <div className="flex flex-wrap justify-center">
 
-                    <div className="project-card">
+                    {projects.map((project, index) => (
+                        <ProjectCard key={index} project={project} />
+                    ))}
+
+                    {/* <div className="project-card">
                         <img className="w-full h-48" src={spacejumpfun} alt="Space Jump Fun" />
                         <div className="px-6 py-4">
                             <div className="font-bold text-xl mb-2">Space Jump Fun</div>
@@ -34,9 +50,9 @@ export default class Projects extends Component
                             <span className="hashtag">#unity</span>
                             <span className="hashtag">#interfaces</span>
                         </div>
-                    </div>
+                    </div> */}
 
-                    <div className="project-card">
+                    {/* <div className="project-card">
                         <img className="w-full h-48" src={polymino} alt="Polymino Gardens" />
                         <div className="px-6 py-4">
                             <div className="font-bold text-xl mb-2">Polymino Gardens</div>
@@ -52,9 +68,9 @@ export default class Projects extends Component
                             <span className="hashtag">#ui</span>
                             <span className="hashtag">#procedural</span>
                         </div>
-                    </div>
+                    </div> */}
 
-                    <div className="project-card">
+                    {/* <div className="project-card">
                         <img className="w-full h-48" src={vrprototype} alt="VR Prototype" />
                         <div className="px-6 py-4">
                             <div className="font-bold text-xl mb-2">VR Prototype</div>
@@ -69,9 +85,9 @@ export default class Projects extends Component
                             <span className="hashtag">#unity</span>
                             <span className="hashtag">#vr</span>
                         </div>
-                    </div>
+                    </div> */}
 
-                    <div className="project-card">
+                    {/* <div className="project-card">
                         <img className="w-full h-48" src={witchsword} alt="Witchsword" />
                         <div className="px-6 py-4">
                             <div className="font-bold text-xl mb-2">Witchsword</div>
@@ -86,11 +102,11 @@ export default class Projects extends Component
                             <span className="hashtag">#unity</span>
                             <span className="hashtag">#vr</span>
                         </div>
-                    </div>
+                    </div> */}
 
 
 
-                    <div className="project-card">
+                    {/* <div className="project-card">
                         <img className="w-full h-48 object-cover object-left-top" src={yaywalker} alt="Yaywalker" />
                         <div className="px-6 py-4">
                             <div className="font-bold text-xl mb-2">Yay!Walker</div>
@@ -105,9 +121,9 @@ export default class Projects extends Component
                             <span className="hashtag">#react</span>
                             <span className="hashtag">#tailwindcss</span>
                         </div>
-                    </div>
+                    </div> */}
 
-                    <div className="project-card">
+                    {/* <div className="project-card">
                         <img className="w-full h-48 object-cover object-left-top" src={rmtradinggame} alt="Rick and Morty Trading Game" />
                         <div className="px-6 py-4">
                             <div className="font-bold text-xl mb-2">Rick and Morty Trading Game</div>
@@ -121,9 +137,9 @@ export default class Projects extends Component
                             <span className="hashtag">#rest</span>
                             <span className="hashtag">#json</span>
                         </div>
-                    </div>
+                    </div> */}
 
-                    <div className="project-card">
+                    {/* <div className="project-card">
                         <img className="w-full h-48 object-cover object-left-top" src={stocplay} alt="StocPlay" />
                         <div className="px-6 py-4">
                             <div className="font-bold text-xl mb-2">StocPlay</div>
@@ -137,9 +153,9 @@ export default class Projects extends Component
                             <span className="hashtag">#css</span>
                             <span className="hashtag">#javascript</span>
                         </div>
-                    </div>
+                    </div> */}
 
-                    <div className="project-card">
+                    {/* <div className="project-card">
                         <img className="w-full h-48 object-cover object-left-top" src={njtransit} alt="NJ Transit" />
                         <div className="px-6 py-4">
                             <div className="font-bold text-xl mb-2">NJ Transit</div>
@@ -153,7 +169,7 @@ export default class Projects extends Component
                             <span className="hashtag">#sequlize</span>
                             <span className="hashtag">#react</span>
                         </div>
-                    </div>
+                    </div> */}
                 </div>
 
 

@@ -29,7 +29,7 @@ const Layout = ({ children }) =>
       <Header siteTitle={data.site.siteMetadata.title} />
       <div className="bg-gray-900">
         <main>{children}</main>
-        <footer className="mb-12 md:mb-0">
+        <footer className="mb-20 md:mb-0">
           © {new Date().getFullYear()}, Trevor Smith-Holbourn
         </footer>
       </div>

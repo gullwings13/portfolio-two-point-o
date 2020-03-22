@@ -24,16 +24,23 @@
   @apply mt-4 mr-4 max-w-sm rounded overflow-hidden shadow-lg border-gray-400 border;
 }
 
-@tailwind utilities;
-
-*{
-  @apply font-serif text-gray-300 font-thin;
-  transition: 0.2s;
+.link-pink{
+  @apply bg-black font-mono pb-1;
+  background:
+    linear-gradient(
+      to bottom, palevioletred 0%,
+      rgb(160, 81, 106) 100%
+    );
+  background-position: 0 100%;
+  background-repeat: repeat-x;
+  background-size: 4px 7px;
+  text-decoration: none;
+  transition: background-size .1s;
 }
 
-body {
-  @apply bg-gray-900;
-  background-color: aqua;
+.link-pink:hover{
+  background-size: 4px 50px;
+  transition: background-size .1s;
 }
 
 .videoContainer{
@@ -50,3 +57,16 @@ body {
   object-fit: cover;
   object-position: center;
 }
+
+@tailwind utilities;
+
+*{
+  @apply font-serif text-gray-300 font-thin;
+  transition: 0.1s;
+}
+
+body {
+  @apply bg-gray-900;
+  background-color: rgb(255, 0, 162);
+}
+

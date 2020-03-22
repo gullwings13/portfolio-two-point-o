@@ -17,7 +17,7 @@ export default class Contact extends React.Component
         return (
 
             <React.Fragment>
-                <form className="text-2xl mt-4"
+                <form className="text-2xl mt-4 text-justify"
                     onSubmit={this.submitForm}
                     action="https://formspree.io/mwkqbanl"
                     method="POST"
@@ -25,24 +25,26 @@ export default class Contact extends React.Component
                     Please contact me using the below form. I will respond as quickly as I can. Thank you!
                 <div className="min-w-full pr-4">
                         <div className="sm:w-3/4 my-4">
-                            <label>Your Email:</label>
+                            <label>Your Email:
                             <input
-                                className="bg-white focus:outline-none focus:shadow-outline border border-gray-300 rounded-lg py-2 px-4 block w-full appearance-none leading-normal"
-                                placeholder="jane@example.com"
-                                type="email"
-                                name="email" />
+                                    className="bg-white focus:outline-none focus:shadow-outline border border-gray-300 rounded-lg py-2 px-4 block w-full appearance-none leading-normal"
+                                    placeholder="jane@example.com"
+                                    type="email"
+                                    name="email" />
+                            </label>
                         </div>
                         <div className="sm:w-3/4 my-4">
-                            <label>Your Message:</label>
+                            <label>Your Message:
                             <textarea rows="3"
-                                className="bg-white focus:outline-none focus:shadow-outline border border-gray-300 rounded-lg py-2 px-4 block w-full appearance-none leading-normal"
-                                placeholder="Hi..."
-                                type="textarea"
-                                name="message" />
+                                    className="bg-white focus:outline-none focus:shadow-outline border border-gray-300 rounded-lg py-2 px-4 block w-full appearance-none leading-normal"
+                                    placeholder="Hi..."
+                                    type="textarea"
+                                    name="message" />
+                            </label>
                         </div>
                     </div>
 
-                    {status === "SUCCESS" ? <p>Thanks!</p> : <button className="btn btn-gray">Submit</button>}
+                    {status === "SUCCESS" ? <p>Thanks!</p> : <button className="link-pink">Submit</button>}
                     {status === "ERROR" && <p>Ooops! There was an error.</p>}
                 </form>
 

@@ -17,20 +17,20 @@ const Header = () => (
             TREVOR SMITH-&#x2060;HOLBOURN
           </Link>
         </h1>
-        <h2 >
-          <span className=" font-serif font-thin text-xl sm:text-2xl md:text-4xl mt-1 md:p-4 md:pt-1 bg-gray-900">Software Engineer & Gameplay Programmer</span>
+        <h2 className="mt-2">
+          <span className="font-serif font-thin text-xl sm:text-2xl md:text-4xl mt-1 md:p-4 md:pt-1 bg-gray-900">Software Engineer & Gameplay Programmer</span>
         </h2>
       </div>
     </header>
     <nav className="flex justify-between w-full fixed bg-gray-900 p-3 md:pt-1 bottom-0 md:top-0 md:bottom-auto">
       <AnchorLink to="/#about" title="About">
-        <span className="font-mono text-xl">About</span>
+        <span className="text-2xl link-pink">About</span>
       </AnchorLink>
       <AnchorLink to="/#projects" title="Projects">
-        <span className="font-mono text-xl">Projects</span>
+        <span className="text-2xl link-pink">Projects</span>
       </AnchorLink>
       <AnchorLink to="/#contact" title="Contact">
-        <span className="font-mono text-xl">Contact</span>
+        <span className="text-2xl link-pink ">Contact</span>
       </AnchorLink>
     </nav>
   </React.Fragment>
