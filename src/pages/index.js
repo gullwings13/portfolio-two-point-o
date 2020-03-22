@@ -7,6 +7,18 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Contact from "../components/Contact"
 import Projects from "../components/Projects"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faGithubSquare, faVimeoSquare, faLinkedin } from '@fortawesome/free-brands-svg-icons'
+
+const randomRotations = [
+  "rand-rotation-neg1", "rand-rotation-neg2", "rand-rotation-neg3", "rand-rotation-neg4",
+  "rand-rotation-1", "rand-rotation-2", "rand-rotation-3", "rand-rotation-4"
+]
+
+const randomRotation = () =>
+  (
+    randomRotations[Math.floor(Math.random() * randomRotation.length)]
+  )
 
 const IndexPage = () => (
   <Layout>
@@ -18,18 +30,23 @@ const IndexPage = () => (
         Coding is my passion because I love problem-solving and creating useful things. I aspire to make a positive contribution in an inclusive and collaborative environment.</p>
       <p className="mt-4">
         Take a look at my demo reel here on <a className="link-pink" href="https://vimeo.com/369092145">Vimeo
-        <i className="fab fa-vimeo-square"></i></a>,
+        <FontAwesomeIcon icon={faVimeoSquare} /></a>,
       </p>
       <p>(the volume is a little loud, please adjust your volume lower before playing)</p>
       <p className="mt-4">You can also find me on:</p>
       <p>
-        <a className="link-pink" href="https://github.com/gullwings13/">Github<i className="fab fa-github-square"></i></a>
+        <a className="link-pink" href="https://github.com/gullwings13/">Github<FontAwesomeIcon icon={faGithubSquare} />
+        </a>
       </p>
       <p>
-        <a className="link-pink" href="https://www.linkedin.com/in/trevor-smith-holbourn/">Linkedin<i className="fab fa-linkedin"></i></a>
+        <a className="link-pink" href="https://www.linkedin.com/in/trevor-smith-holbourn/">Linkedin<FontAwesomeIcon icon={faLinkedin} />
+        </a>
       </p>
-      <p>And grab my resume  <a className="link-pink" href="https://trevorsmithholbourn.xyz/resume.pdf">here<i className="far fa-file-pdf"></i></a></p>
-    </div>
+      <p>
+        And grab my resume  <a className="link-pink" href="https://trevorsmithholbourn.xyz/resume.pdf">here<FontAwesomeIcon icon={faGithubSquare} />
+        </a>
+      </p>
+    </div >
 
 
 
@@ -37,14 +54,14 @@ const IndexPage = () => (
 
     <div id="projects" className="my-6 p-4 text-2xl">
       <span className="font-mono text-3xl bg-black">My Projects</span>
-      <Projects />
+      <Projects randomRotation={randomRotation} />
     </div>
 
     <div id="contact" className="my-6 p-4 text-2xl">
       <span className="font-mono text-3xl bg-black">Contact Me!</span>
       <Contact />
     </div>
-  </Layout>
+  </Layout >
 )
 
 export default IndexPage

@@ -3,7 +3,7 @@ import React from 'react'
 export default function ProjectCard(props)
 {
     const { title, image, description, tags } = props.project
-
+    const { randomRotation } = props
     const hashtags = (tags) =>
         (
             tags.map((tag, index) => (
@@ -12,7 +12,7 @@ export default function ProjectCard(props)
         )
 
     return (
-        <div className="project-card">
+        <div className={`project-card ${randomRotation()}`}>
             <img className="w-full h-48 object-cover object-left-top" src={image} alt="Yaywalker" />
             <div className="px-6 py-4">
                 <div className="font-bold text-xl mb-2">{title}</div>

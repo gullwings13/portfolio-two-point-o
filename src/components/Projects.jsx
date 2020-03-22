@@ -22,6 +22,7 @@ const projects = [
 
 export default class Projects extends Component
 {
+
     render()
     {
         return (
@@ -32,7 +33,7 @@ export default class Projects extends Component
                 <div className="flex flex-wrap justify-center">
 
                     {projects.map((project, index) => (
-                        <ProjectCard key={index} project={project} />
+                        <ProjectCard key={index} project={project} randomRotation={this.props.randomRotation} />
                     ))}
 
                     {/* <div className="project-card">

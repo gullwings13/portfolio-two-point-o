@@ -668,6 +668,10 @@ video {
   border-width: 1px;
 }
 
+.project-card:hover{
+  transform: translate3d(0,0,1px)
+}
+
 .link-pink{
   background-color: #000;
   font-family: Major Mono Display, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
@@ -675,7 +679,7 @@ video {
   background:
     linear-gradient(
       to bottom, palevioletred 0%,
-      rgb(160, 81, 106) 100%
+      lightcoral 100%
     );
   background-position: 0 100%;
   background-repeat: repeat-x;
@@ -687,6 +691,38 @@ video {
 .link-pink:hover{
   background-size: 4px 50px;
   transition: background-size .1s;
+}
+
+.rand-rotation-1{
+  transform: rotate(1deg);
+}
+
+.rand-rotation-2{
+  transform: rotate(2deg);
+}
+
+.rand-rotation-3{
+  transform: rotate(3deg);
+}
+
+.rand-rotation-4{
+  transform: rotate(4deg);
+}
+
+.rand-rotation-neg4{
+  transform: rotate(-4deg);
+}
+
+.rand-rotation-neg3{
+  transform: rotate(-3deg);
+}
+
+.rand-rotation-neg2{
+  transform: rotate(-2deg);
+}
+
+.rand-rotation-neg1{
+  transform: rotate(-1deg);
 }
 
 .videoContainer{

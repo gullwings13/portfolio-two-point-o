@@ -13,7 +13,7 @@ const Header = () => (
     <header className="absolute top-0 flex justify-center w-full text-center md:mt-24">
       <div>
         <h1>
-          <Link className="font-mono text-4xl sm:text-4xl md:text-6xl bg-gray-900 mt-1 md:p-4 md:pt-1" to="/">
+          <Link className="font-mono text-4xl sm:text-4xl md:text-6xl bg-gray-900 mt-1 md:py-4 md:pt-1" to="/">
             TREVOR SMITH-&#x2060;HOLBOURN
           </Link>
         </h1>
@@ -23,14 +23,14 @@ const Header = () => (
       </div>
     </header>
     <nav className="flex justify-between w-full fixed bg-gray-900 p-3 md:pt-1 bottom-0 md:top-0 md:bottom-auto">
-      <AnchorLink to="/#about" title="About">
+      <AnchorLink to="/#about" title="About" className="sm:w-1/3 sm:text-left">
         <span className="text-2xl link-pink">About</span>
       </AnchorLink>
-      <AnchorLink to="/#projects" title="Projects">
+      <AnchorLink to="/#projects" title="Projects" className="sm:w-1/3 sm:text-center">
         <span className="text-2xl link-pink">Projects</span>
       </AnchorLink>
-      <AnchorLink to="/#contact" title="Contact">
-        <span className="text-2xl link-pink ">Contact</span>
+      <AnchorLink to="/#contact" title="Contact" className="sm:w-1/3 sm:text-right">
+        <span className="text-2xl link-pink">Contact</span>
       </AnchorLink>
     </nav>
   </React.Fragment>
