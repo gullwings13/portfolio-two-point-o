@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Roboto+Slab:wght@100;400;800&display=swap');
+
+@tailwind base;
+
+@tailwind components;
+
+.btn {
+  @apply font-bold py-2 px-4 rounded;
+}
+
+.btn-gray {
+  @apply bg-gray-400 text-gray-800;
+}
+
+.btn-gray:hover {
+  @apply bg-gray-300;
+}
+
+.hashtag {
+  @apply inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2;
+}
+
+.project-card{
+  @apply mt-4 mr-4 max-w-sm rounded overflow-hidden shadow-lg border-gray-400 border;
+}
+
+@tailwind utilities;
+
+*{
+  @apply font-serif text-gray-300 font-thin;
+  transition: 0.2s;
+}
+
+body {
+  @apply bg-gray-900;
+  background-color: aqua;
+}
+
+.videoContainer{
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.demoReelVideo{
+  height:100vh;
+  width:100vw;
+  z-index: 10;
+  object-fit: cover;
+  object-position: center;
+}
