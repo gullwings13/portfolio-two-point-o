@@ -673,6 +673,10 @@ video {
   transform-style: preserve-3d;
 }
 
+.preserve-3d{
+  transform-style: preserve-3d;
+}
+
 .translate-z-20px{
   transform: translateZ(60px);
 }
@@ -680,7 +684,7 @@ video {
 .link-pink{
   display: inline-block;
   position: relative;
-  transform: rotate(-0.4deg);
+  transform: rotate(-0.6deg);
   font-family: Major Mono Display, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   padding-bottom: 0.25rem;
   background:
@@ -695,22 +699,11 @@ video {
   transition: background-size .1s, transform .4s;
 }
 
-/* .link-pink::before{
-  display: inline-block;
-  content: "";
-  position: absolute;
-} */
-
 .link-pink:hover{
   background-size: 4px 50px;
-  transform: rotate(0.2deg);
+  transform: rotate(0.4deg);
   transition: background-size .1s, transform .4s;
 }
-
-/* .link-pink::after{
-  display: inline-block;
-  transform: rotate(-8deg);
-} */
 
 .rand-rotation-1{
   transform: rotate(0.4deg);
@@ -14861,7 +14854,6 @@ video {
 
 body {
   background-color: #1a202c;
-  background-color: rgb(255, 0, 162);
 }
 
 @media (min-width: 640px){

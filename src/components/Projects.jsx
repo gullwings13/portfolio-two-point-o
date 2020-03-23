@@ -21,67 +21,89 @@ const projects = [
     {
         title: "Yay!Walker",
         image: yaywalker,
-        description: `User submitted walking tours. Ruby on Rails backend with React frontend. Live site <a class="text-sm link-pink font-serif" href="https://aqueous-fortress-10362.herokuapp.com/" >here</a>`,
+        description: <React.Fragment>
+            User submitted walking tours. Ruby on Rails backend with React frontend. Deployed to <a className="link-pink font-serif" href="https://aqueous-fortress-10362.herokuapp.com/" >Heroku</a>
+        </React.Fragment>,
         tags: ["react", "javascript", "tailwindcss", "css", "rubyonrails", "restfulapi"]
     },
     {
         title: "VR Prototype",
         image: vrprototype,
-        description: `This VR prototype explores different firing mechanics. Watch a quick gameplay video on <a class="text-sm link-pink font-serif" href="https://tsh.itch.io/vrprototype" >itch.io</a>`,
+        description: <React.Fragment>
+            This VR prototype explores different firing mechanics. Watch a quick gameplay video on <a className="link-pink font-serif" href="https://tsh.itch.io/vrprototype" >itch.io<FontAwesomeIcon icon={faItchIo} /></a>
+        </React.Fragment>,
         tags: ["unity", "vr", "game"]
     },
     {
         title: "Polymino Gardens",
         image: polymino,
-        description: `A puzzle game featuring an animated UI and procedural gardens. Download for PC and MAC at <a class="text-sm link-pink font-serif" href="https://tsh.itch.io/polyminogardens" >itch.io</a>`,
+        description: <React.Fragment>
+            A puzzle game featuring an animated UI and procedural gardens. Download for PC and MAC at <a className="link-pink font-serif" href="https://tsh.itch.io/polyminogardens" >itch.io<FontAwesomeIcon icon={faItchIo} /></a>
+        </React.Fragment>,
         tags: ["unity", "procedural", "game"]
     },
     {
         title: "Space Jump Fun",
         image: spacejumpfun,
-        description: `A 2d platformer making use of c# interfaces. Give it a try on <a className="font-bold" href="https://tsh.itch.io/space-jump-fun" ><span className="text-purple-600 hover:underline">itch.io <i className="fab fa-itch-io text-purple-600"></i></span></a>`,
+        description: <React.Fragment>
+            A 2d platformer using c# interfaces. Give it a try on <a className="link-pink font-serif" href="https://tsh.itch.io/space-jump-fun" >itch.io<FontAwesomeIcon icon={faItchIo} /></a>
+        </React.Fragment>,
         tags: ["unity", "interfaces", "game"]
     },
     {
         title: "Witchsword",
         image: witchsword,
-        description: `A simple platformer making use of c# interfaces. Give it a try on <a className="font-bold" href="https://tsh.itch.io/space-jump-fun" ><span className="text-purple-600 hover:underline">itch.io <i className="fab fa-itch-io text-purple-600"></i></span></a>`,
+        description: <React.Fragment>
+            The beginnings of an action RPG exploring VR elements <a className="link-pink font-serif" href="https://tsh.itch.io/witchswordv2" >itch.io<FontAwesomeIcon icon={faItchIo} /></a>
+        </React.Fragment>,
         tags: ["unity", "vr", "ai", "game"]
     },
     {
         title: "Stoc Play",
         image: stocplay,
-        description: `A simple platformer making use of c# interfaces. Give it a try on <a className="font-bold" href="https://tsh.itch.io/space-jump-fun" ><span className="text-purple-600 hover:underline">itch.io <i className="fab fa-itch-io text-purple-600"></i></span></a>`,
+        description: <React.Fragment>
+            Trade virtual stocks to become more confident in the stock market. Live version <a className="link-pink font-serif" href="https://pages.git.generalassemb.ly/tsholbourn/stock-trader/">here</a>
+        </React.Fragment>,
         tags: ["javascript", "css", "restfulapi"]
     },
     {
         title: "Rick and Morty Trading Game",
         image: rmtradinggame,
-        description: `A simple platformer making use of c# interfaces. Give it a try on <a className="font-bold" href="https://tsh.itch.io/space-jump-fun" ><span className="text-purple-600 hover:underline">itch.io <i className="fab fa-itch-io text-purple-600"></i></span></a>`,
+        description: <React.Fragment>
+            Trade exotic goods while you explore the Rick and Morty Multiverse, try it out on <a className="link-pink font-serif" href="http://trev-rm-trading-game.surge.sh/" >surge.sh</a>
+        </React.Fragment>,
         tags: ["react", "javascript", "css", "restfulapi", "game"]
     },
     {
         title: "NJ Transit Mobile",
         image: njtransit,
-        description: `A simple platformer making use of c# interfaces. Give it a try on <a className="font-bold" href="https://tsh.itch.io/space-jump-fun" ><span className="text-purple-600 hover:underline">itch.io <i className="fab fa-itch-io text-purple-600"></i></span></a>`,
-        tags: ["csharp", "unity", "interfaces"]
+        description: <React.Fragment>
+            UX and SEI Collaboration, taking UX Wireframes and building a functional prototype with full CRUD as a team. See the live version <a className="link-pink font-serif" href="https://nj-transit-mobile.herokuapp.com/" >here</a>
+        </React.Fragment>,
+        tags: ["react", "javascript", "express", "sequlize", "restfulapi"]
     },
     {
         title: "Portfolio",
         image: portfolio,
-        description: `A simple platformer making use of c# interfaces. Give it a try on <a className="font-bold" href="https://tsh.itch.io/space-jump-fun" ><span className="text-purple-600 hover:underline">itch.io <i className="fab fa-itch-io text-purple-600"></i></span></a>`,
+        description: <React.Fragment>
+            Performant Gatsby.js static site featuring video landing and dynamic project filtering. You are here right now!
+        </React.Fragment>,
         tags: ["gatsby", "react", "javascript", "tailwindcss", "css"]
     },
     {
         title: "Tic Tac Toe",
         image: tictactoe,
-        description: `A simple platformer making use of c# interfaces. Give it a try on <a className="font-bold" href="https://tsh.itch.io/space-jump-fun" ><span className="text-purple-600 hover:underline">itch.io <i className="fab fa-itch-io text-purple-600"></i></span></a>`,
+        description: <React.Fragment>
+            Tic tac toe featuring recursive minimax AI algorithm. Try your hand <a className="link-pink font-serif" href="https://tsh.itch.io/space-jump-fun" >here</a>
+        </React.Fragment>,
         tags: ["javascript", "css", "ai"]
     },
     {
         title: "Weather App",
         image: weather,
-        description: `Javscript weather app, querying the open weather API and rendering the results. CSS formating <a className="font-bold" href="https://tsh.itch.io/space-jump-fun" ><span className="text-purple-600 hover:underline">itch.io <i className="fab fa-itch-io text-purple-600"></i></span></a>`,
+        description: <React.Fragment>
+            Javscript weather app, querying the open weather API and rendering the results. Live site <a className="link-pink font-serif" href="https://tsh.itch.io/space-jump-fun" >here</a>
+        </React.Fragment>,
         tags: ["javascript", "css", "restfulapi"]
     }
 ]

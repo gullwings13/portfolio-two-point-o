@@ -32,6 +32,10 @@
   transform-style: preserve-3d;
 }
 
+.preserve-3d{
+  transform-style: preserve-3d;
+}
+
 .translate-z-20px{
   transform: translateZ(60px);
 }
@@ -39,7 +43,7 @@
 .link-pink{
   display: inline-block;
   position: relative;
-  transform: rotate(-0.4deg);
+  transform: rotate(-0.6deg);
   @apply font-mono pb-1;
   background:
     linear-gradient(
@@ -53,22 +57,11 @@
   transition: background-size .1s, transform .4s;
 }
 
-/* .link-pink::before{
-  display: inline-block;
-  content: "";
-  position: absolute;
-} */
-
 .link-pink:hover{
   background-size: 4px 50px;
-  transform: rotate(0.2deg);
+  transform: rotate(0.4deg);
   transition: background-size .1s, transform .4s;
 }
-
-/* .link-pink::after{
-  display: inline-block;
-  transform: rotate(-8deg);
-} */
 
 .rand-rotation-1{
   transform: rotate(0.4deg);
@@ -126,6 +119,5 @@
 
 body {
   @apply bg-gray-900;
-  background-color: rgb(255, 0, 162);
 }
 
