@@ -106,7 +106,7 @@ const projects = [
         title: "NJ Transit Mobile",
         image: njtransit,
         description: <React.Fragment>
-            UX and SEI Collaboration, taking UX Wireframes and building a functional prototype with full CRUD as a team. See the live version
+            UX and SEI Collaboration, taking UX Wireframes and building a functional prototype with full CRUD as a team.
         </React.Fragment>,
         tags: ["react", "javascript", "express", "sequlize", "restfulapi"],
         github: "",
@@ -121,14 +121,14 @@ const projects = [
             Performant Gatsby.js static site featuring video landing and dynamic project filtering. You are here right now!
         </React.Fragment>,
         tags: ["gatsby", "react", "javascript", "tailwindcss", "css"],
-        github: "",
+        github: "https://github.com/gullwings13/portfolio-two-point-o",
         livesite: ""
     },
     {
         title: "Tic Tac Toe",
         image: tictactoe,
         description: <React.Fragment>
-            Tic tac toe featuring recursive minimax AI algorithm. Try your hand <a className="link-pink font-serif" href="https://tsh.itch.io/space-jump-fun" >here</a>
+            Tic tac toe featuring recursive minimax AI algorithm.
         </React.Fragment>,
         tags: ["javascript", "css", "ai"],
         github: "https://github.com/gullwings13/tic-tac-toe",
