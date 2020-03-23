@@ -28,27 +28,10 @@ const IndexPage = () => (
     <SEO title="Home" />
     <div id="about" className="my-6 p-4 text-2xl text-justify">
       <span className="font-mono text-3xl bg-black">About Me</span>
-      <p className="mt-4"><span className="font-bold">Hi!</span> I’m an empathic and imaginative software engineer with over 20 years working in technology. Having previously designed and implemented reliable, fast and secure Cisco networks, I am now building complex full stack web applications and games in JS/React/Node and C#/Unity.</p>
       <p className="mt-4">
-        Coding is my passion because I love problem-solving and creating useful things. I aspire to make a positive contribution in an inclusive and collaborative environment.</p>
-      <p className="mt-4">
-        Take a look at my demo reel here on <a className="link-pink" href="https://vimeo.com/369092145">Vimeo
-        <FontAwesomeIcon icon={faVimeoSquare} /></a>,
+        <span className="font-bold">Hi!</span> I’m an empathic and imaginative software engineer with over 20 years working in technology. Having previously designed and implemented reliable, fast and secure Cisco networks, I am now building complex full stack web applications and games in JS/React/Node and C#/Unity. Coding is my passion because I love problem-solving and creating useful things. I aspire to make a positive contribution in an inclusive and collaborative environment.
       </p>
-      <p>(the volume is a little loud, please adjust your volume lower before playing)</p>
-      <p className="mt-4">You can also find me on:</p>
-      <p>
-        <a className="link-pink" href="https://github.com/gullwings13/">Github<FontAwesomeIcon icon={faGithubSquare} />
-        </a>
-      </p>
-      <p>
-        <a className="link-pink" href="https://www.linkedin.com/in/trevor-smith-holbourn/">Linkedin<FontAwesomeIcon icon={faLinkedin} />
-        </a>
-      </p>
-      <p>
-        And grab my resume  <a className="link-pink" href="https://trevorsmithholbourn.xyz/resume.pdf">here<FontAwesomeIcon icon={faFilePdf} />
-        </a>
-      </p>
+
     </div >
 
 

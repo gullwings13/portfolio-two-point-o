@@ -1,4 +1,7 @@
 import React from "react"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faGithubSquare, faVimeoSquare, faLinkedin } from '@fortawesome/free-brands-svg-icons'
+import { faFilePdf } from '@fortawesome/free-solid-svg-icons'
 
 export default class Contact extends React.Component
 {
@@ -23,7 +26,8 @@ export default class Contact extends React.Component
                     method="POST"
                 >
                     Please contact me using the below form. I will respond as quickly as I can. Thank you!
-                <div className="min-w-full pr-4">
+                    
+                    <div className="min-w-full pr-4">
                         <div className="sm:w-3/4 my-4">
                             <label>Your Email:
                             <input
@@ -47,8 +51,22 @@ export default class Contact extends React.Component
                     {status === "SUCCESS" ? <p>Thanks!</p> : <button className="link-pink">Submit</button>}
                     {status === "ERROR" && <p>Ooops! There was an error.</p>}
                 </form>
-
-
+                <div className="text-right">
+                    <p className="mt-4">You can also find me on:</p>
+                    <p>
+                        <a className="link-pink" href="https://github.com/gullwings13/">Github<FontAwesomeIcon icon={faGithubSquare} />
+                        </a>
+                    </p>
+                    <p>
+                        <a className="link-pink" href="https://www.linkedin.com/in/trevor-smith-holbourn/">Linkedin<FontAwesomeIcon icon={faLinkedin} />
+                        </a>
+                    </p>
+                    <p>
+                        And grab my resume:</p>
+                    <p>  <a className="link-pink" href={'/resume.pdf'}>here<FontAwesomeIcon icon={faFilePdf} />
+                        </a>
+                    </p>
+                </div>
             </React.Fragment>
         )
     }

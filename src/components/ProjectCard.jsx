@@ -4,7 +4,7 @@ import Tilt from 'react-parallax-tilt'
 
 export default function ProjectCard(props)
 {
-    const { title, image, description, tags } = props.project
+    const { title, image, description, tags, github, livesite } = props.project
     const hashtags = (tags) =>
         (
             tags.map((tag, index) => (
@@ -31,12 +31,20 @@ export default function ProjectCard(props)
                 />
                 <div className="px-4 py-4 h-32 xl:h-48">
                     <div className="font-bold text-indigo-200 text-lg mb-2">{title}</div>
-                    <p className="text-gray-300 text-base text-justify translate-z-20px">
+                    <p className="text-gray-300 text-sm text-justify translate-z-20px">
                         {description}
                     </p>
                 </div>
-                <div className="px-2 py-2 h-16 flex justify-center items-start flex-wrap-reverse">
-                    {hashtags(tags)}
+                <div className="flex text-xs h-16">
+                    <div className="px-1 py-1 flex flex-col w-1/6 items-center justify-end">
+                        {github ? <a className="link-pink font-serif" href={`${github}`}>GitHub</a> : ""}
+                    </div>
+                    <div className="px-1 py-1 w-4/6 h-16 flex justify-center items-start flex-wrap-reverse">
+                        {hashtags(tags)}
+                    </div>
+                    <div className="px-1 py-1 flex flex-col w-1/6 items-center justify-end">
+                        {livesite}
+                    </div>
                 </div>
             </div >
         </Tilt>

@@ -63,38 +63,6 @@
   transition: background-size .1s, transform .4s;
 }
 
-.rand-rotation-1{
-  transform: rotate(0.4deg);
-}
-
-.rand-rotation-2{
-  transform: rotate(0.8deg);
-}
-
-.rand-rotation-3{
-  transform: rotate(1.6deg);
-}
-
-.rand-rotation-4{
-  transform: rotate(2deg);
-}
-
-.rand-rotation-neg4{
-  transform: rotate(-2deg);
-}
-
-.rand-rotation-neg3{
-  transform: rotate(-1.6deg);
-}
-
-.rand-rotation-neg2{
-  transform: rotate(-0.8deg);
-}
-
-.rand-rotation-neg1{
-  transform: rotate(-0.4deg);
-}
-
 .videoContainer{
   position: relative;
   width: 100vw;
