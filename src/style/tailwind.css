@@ -17,66 +17,89 @@
 }
 
 .hashtag {
-  @apply inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2;
+  @apply inline-block bg-gray-900 rounded-full px-1 text-xs font-normal text-red-300 m-1;
 }
 
+/* max-w-sm */
+
 .project-card{
-  @apply mt-4 mr-4 max-w-sm rounded overflow-hidden shadow-lg border-gray-400 border;
+  @apply m-4 rounded overflow-hidden shadow-2xl bg-gray-800 border-gray-700 border;
+    transition: transform .5s;
+    transform-style: preserve-3d;
 }
 
 .project-card:hover{
-  transform: translate3d(0,0,1px)
+  transform-style: preserve-3d;
+}
+
+.translate-z-20px{
+  transform: translateZ(60px);
 }
 
 .link-pink{
-  @apply bg-black font-mono pb-1;
+  display: inline-block;
+  position: relative;
+  transform: rotate(-0.4deg);
+  @apply font-mono pb-1;
   background:
     linear-gradient(
-      to bottom, palevioletred 0%,
-      lightcoral 100%
-    );
+        to bottom, palevioletred 0%,
+        lightcoral 100%
+      );
   background-position: 0 100%;
   background-repeat: repeat-x;
   background-size: 4px 7px;
   text-decoration: none;
-  transition: background-size .1s;
+  transition: background-size .1s, transform .4s;
 }
+
+/* .link-pink::before{
+  display: inline-block;
+  content: "";
+  position: absolute;
+} */
 
 .link-pink:hover{
   background-size: 4px 50px;
-  transition: background-size .1s;
+  transform: rotate(0.2deg);
+  transition: background-size .1s, transform .4s;
 }
 
+/* .link-pink::after{
+  display: inline-block;
+  transform: rotate(-8deg);
+} */
+
 .rand-rotation-1{
-  transform: rotate(1deg);
+  transform: rotate(0.4deg);
 }
 
 .rand-rotation-2{
-  transform: rotate(2deg);
+  transform: rotate(0.8deg);
 }
 
 .rand-rotation-3{
-  transform: rotate(3deg);
+  transform: rotate(1.6deg);
 }
 
 .rand-rotation-4{
-  transform: rotate(4deg);
+  transform: rotate(2deg);
 }
 
 .rand-rotation-neg4{
-  transform: rotate(-4deg);
-}
-
-.rand-rotation-neg3{
-  transform: rotate(-3deg);
-}
-
-.rand-rotation-neg2{
   transform: rotate(-2deg);
 }
 
+.rand-rotation-neg3{
+  transform: rotate(-1.6deg);
+}
+
+.rand-rotation-neg2{
+  transform: rotate(-0.8deg);
+}
+
 .rand-rotation-neg1{
-  transform: rotate(-1deg);
+  transform: rotate(-0.4deg);
 }
 
 .videoContainer{

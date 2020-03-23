@@ -7,170 +7,171 @@ import stocplay from '../images/stocplay.png'
 import rmtradinggame from '../images/rmtradinggame.png'
 import njtransit from '../images/njtransit.png'
 import yaywalker from '../images/yaywalker.png'
+import tictactoe from '../images/tictactoe.png'
+import weather from '../images/weather.png'
+import portfolio from '../images/portfolio.png'
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faItchIo } from '@fortawesome/free-brands-svg-icons'
+
 import ProjectCard from './ProjectCard'
 
 
 const projects = [
     {
+        title: "Yay!Walker",
+        image: yaywalker,
+        description: `User submitted walking tours. Ruby on Rails backend with React frontend. Live site <a class="text-sm link-pink font-serif" href="https://aqueous-fortress-10362.herokuapp.com/" >here</a>`,
+        tags: ["react", "javascript", "tailwindcss", "css", "rubyonrails", "restfulapi"]
+    },
+    {
+        title: "VR Prototype",
+        image: vrprototype,
+        description: `This VR prototype explores different firing mechanics. Watch a quick gameplay video on <a class="text-sm link-pink font-serif" href="https://tsh.itch.io/vrprototype" >itch.io</a>`,
+        tags: ["unity", "vr", "game"]
+    },
+    {
+        title: "Polymino Gardens",
+        image: polymino,
+        description: `A puzzle game featuring an animated UI and procedural gardens. Download for PC and MAC at <a class="text-sm link-pink font-serif" href="https://tsh.itch.io/polyminogardens" >itch.io</a>`,
+        tags: ["unity", "procedural", "game"]
+    },
+    {
         title: "Space Jump Fun",
         image: spacejumpfun,
+        description: `A 2d platformer making use of c# interfaces. Give it a try on <a className="font-bold" href="https://tsh.itch.io/space-jump-fun" ><span className="text-purple-600 hover:underline">itch.io <i className="fab fa-itch-io text-purple-600"></i></span></a>`,
+        tags: ["unity", "interfaces", "game"]
+    },
+    {
+        title: "Witchsword",
+        image: witchsword,
         description: `A simple platformer making use of c# interfaces. Give it a try on <a className="font-bold" href="https://tsh.itch.io/space-jump-fun" ><span className="text-purple-600 hover:underline">itch.io <i className="fab fa-itch-io text-purple-600"></i></span></a>`,
-        tags: ["#csharp", "#unity", "#interfaces"]
+        tags: ["unity", "vr", "ai", "game"]
+    },
+    {
+        title: "Stoc Play",
+        image: stocplay,
+        description: `A simple platformer making use of c# interfaces. Give it a try on <a className="font-bold" href="https://tsh.itch.io/space-jump-fun" ><span className="text-purple-600 hover:underline">itch.io <i className="fab fa-itch-io text-purple-600"></i></span></a>`,
+        tags: ["javascript", "css", "restfulapi"]
+    },
+    {
+        title: "Rick and Morty Trading Game",
+        image: rmtradinggame,
+        description: `A simple platformer making use of c# interfaces. Give it a try on <a className="font-bold" href="https://tsh.itch.io/space-jump-fun" ><span className="text-purple-600 hover:underline">itch.io <i className="fab fa-itch-io text-purple-600"></i></span></a>`,
+        tags: ["react", "javascript", "css", "restfulapi", "game"]
+    },
+    {
+        title: "NJ Transit Mobile",
+        image: njtransit,
+        description: `A simple platformer making use of c# interfaces. Give it a try on <a className="font-bold" href="https://tsh.itch.io/space-jump-fun" ><span className="text-purple-600 hover:underline">itch.io <i className="fab fa-itch-io text-purple-600"></i></span></a>`,
+        tags: ["csharp", "unity", "interfaces"]
+    },
+    {
+        title: "Portfolio",
+        image: portfolio,
+        description: `A simple platformer making use of c# interfaces. Give it a try on <a className="font-bold" href="https://tsh.itch.io/space-jump-fun" ><span className="text-purple-600 hover:underline">itch.io <i className="fab fa-itch-io text-purple-600"></i></span></a>`,
+        tags: ["gatsby", "react", "javascript", "tailwindcss", "css"]
+    },
+    {
+        title: "Tic Tac Toe",
+        image: tictactoe,
+        description: `A simple platformer making use of c# interfaces. Give it a try on <a className="font-bold" href="https://tsh.itch.io/space-jump-fun" ><span className="text-purple-600 hover:underline">itch.io <i className="fab fa-itch-io text-purple-600"></i></span></a>`,
+        tags: ["javascript", "css", "ai"]
+    },
+    {
+        title: "Weather App",
+        image: weather,
+        description: `Javscript weather app, querying the open weather API and rendering the results. CSS formating <a className="font-bold" href="https://tsh.itch.io/space-jump-fun" ><span className="text-purple-600 hover:underline">itch.io <i className="fab fa-itch-io text-purple-600"></i></span></a>`,
+        tags: ["javascript", "css", "restfulapi"]
     }
 ]
 
+const getHastags = (array) =>
+{
+    let allHashTags = []
+    array.forEach(element =>
+    {
+        allHashTags = allHashTags.concat(element.tags)
+    })
+    const uniqueSet = new Set(allHashTags)
+    return [...uniqueSet]
+}
+
+const uniqueHashtags = getHastags(projects)
 
 export default class Projects extends Component
 {
+
+    state = {
+        projects: [],
+        filter: null
+    }
+
+    shuffleArray = (array) =>
+    {
+        for (let i = array.length - 1; i > 0; i--)
+        {
+            const j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]]
+        }
+    }
+
+    filterArray = (filter) =>
+    {
+        let newArray = projects.filter(element =>
+        {
+            let match = false
+            element.tags.forEach(tag =>
+            {
+                if (tag === filter)
+                    match = true
+            })
+            return match
+        })
+        this.setState({
+            projects: newArray,
+            filter: filter
+        })
+    }
+
+    resetArray = () =>
+    {
+        this.setState({
+            projects: projects,
+            filter: null
+        })
+    }
+
+    componentDidMount()
+    {
+        this.shuffleArray(projects)
+        this.setState({
+            projects: projects,
+            filter: null
+        })
+    }
 
     render()
     {
         return (
             <React.Fragment>
-                <div className="text-2xl mt-4 text-justify">I have been making my own prototypes and games for the last several years in my spare time.
-
+                <div>Filter by tech</div>
+                <div className="flex flex-wrap font-mono text-sm justify-center">
+                    <button className="link-pink" onClick={() => { this.resetArray() }}>All</button>
+                    {uniqueHashtags.map((hashtag, index) => (
+                        <button key={index} className="link-pink capitalize mx-1" onClick={() =>
+                        {
+                            this.filterArray(hashtag.toLowerCase())
+                        }}>{hashtag}</button>
+                    ))}
                 </div>
                 <div className="flex flex-wrap justify-center">
 
-                    {projects.map((project, index) => (
+                    {this.state.projects.map((project, index) => (
                         <ProjectCard key={index} project={project} randomRotation={this.props.randomRotation} />
                     ))}
 
-                    {/* <div className="project-card">
-                        <img className="w-full h-48" src={spacejumpfun} alt="Space Jump Fun" />
-                        <div className="px-6 py-4">
-                            <div className="font-bold text-xl mb-2">Space Jump Fun</div>
-                            <p className="text-gray-700 text-base">
-                                A simple platformer making use of c# interfaces. Give it a try on <a
-                                    className="font-bold"
-                                    href="https://tsh.itch.io/space-jump-fun">
-                                    <span className="text-purple-600 hover:underline">itch.io <i className="fab fa-itch-io text-purple-600"></i></span></a></p>
-                        </div>
-                        <div className="px-6 py-4">
-                            <span className="hashtag">#csharp</span>
-                            <span className="hashtag">#unity</span>
-                            <span className="hashtag">#interfaces</span>
-                        </div>
-                    </div> */}
 
-                    {/* <div className="project-card">
-                        <img className="w-full h-48" src={polymino} alt="Polymino Gardens" />
-                        <div className="px-6 py-4">
-                            <div className="font-bold text-xl mb-2">Polymino Gardens</div>
-                            <p className="text-gray-700 text-base">
-                                A puzzle game featuring an animated UI and procedural gardens. Download for PC and MAC at <a
-                                    className="font-bold"
-                                    href="https://tsh.itch.io/polyminogardens">
-                                    <span className="text-purple-600 hover:underline">itch.io <i className="fab fa-itch-io text-purple-600"></i></span></a></p>
-                        </div>
-                        <div className="px-6 py-4">
-                            <span className="hashtag">#csharp</span>
-                            <span className="hashtag">#unity</span>
-                            <span className="hashtag">#ui</span>
-                            <span className="hashtag">#procedural</span>
-                        </div>
-                    </div> */}
-
-                    {/* <div className="project-card">
-                        <img className="w-full h-48" src={vrprototype} alt="VR Prototype" />
-                        <div className="px-6 py-4">
-                            <div className="font-bold text-xl mb-2">VR Prototype</div>
-                            <p className="text-gray-700 text-base">
-                                This VR prototype explores different firing mechanics. Watch a quick gameplay video on <a
-                                    className="font-bold"
-                                    href="https://tsh.itch.io/vrprototype">
-                                    <span className="text-purple-600 hover:underline">itch.io <i className="fab fa-itch-io text-purple-600"></i></span></a></p>
-                        </div>
-                        <div className="px-6 py-4">
-                            <span className="hashtag">#csharp</span>
-                            <span className="hashtag">#unity</span>
-                            <span className="hashtag">#vr</span>
-                        </div>
-                    </div> */}
-
-                    {/* <div className="project-card">
-                        <img className="w-full h-48" src={witchsword} alt="Witchsword" />
-                        <div className="px-6 py-4">
-                            <div className="font-bold text-xl mb-2">Witchsword</div>
-                            <p className="text-gray-700 text-base">
-                                The beginnings of an action RPG exploring VR elements <a
-                                    className="font-bold"
-                                    href="https://tsh.itch.io/witchswordv2">
-                                    <span className="text-purple-600 hover:underline">itch.io <i className="fab fa-itch-io text-purple-600"></i></span></a></p>
-                        </div>
-                        <div className="px-6 py-4">
-                            <span className="hashtag">#csharp</span>
-                            <span className="hashtag">#unity</span>
-                            <span className="hashtag">#vr</span>
-                        </div>
-                    </div> */}
-
-
-
-                    {/* <div className="project-card">
-                        <img className="w-full h-48 object-cover object-left-top" src={yaywalker} alt="Yaywalker" />
-                        <div className="px-6 py-4">
-                            <div className="font-bold text-xl mb-2">Yay!Walker</div>
-                            <p className="text-gray-700 text-base">
-                                User submitted walking tours. Backend
-                                using Ruby on Rails and Frontend crafted in React. A live version can be found <a
-                                    className="font-bold"
-                                    href="https://aqueous-fortress-10362.herokuapp.com/">here</a> </p>
-                        </div>
-                        <div className="px-6 py-4">
-                            <span className="hashtag">#rubyonrails</span>
-                            <span className="hashtag">#react</span>
-                            <span className="hashtag">#tailwindcss</span>
-                        </div>
-                    </div> */}
-
-                    {/* <div className="project-card">
-                        <img className="w-full h-48 object-cover object-left-top" src={rmtradinggame} alt="Rick and Morty Trading Game" />
-                        <div className="px-6 py-4">
-                            <div className="font-bold text-xl mb-2">Rick and Morty Trading Game</div>
-                            <p className="text-gray-700 text-base">
-                                Trade exotic goods while you explore the Rick and Morty Multiverse, try it out <a
-                                    className="font-bold"
-                                    href="http://trev-rm-trading-game.surge.sh/">here</a> </p>
-                        </div>
-                        <div className="px-6 py-4">
-                            <span className="hashtag">#react</span>
-                            <span className="hashtag">#rest</span>
-                            <span className="hashtag">#json</span>
-                        </div>
-                    </div> */}
-
-                    {/* <div className="project-card">
-                        <img className="w-full h-48 object-cover object-left-top" src={stocplay} alt="StocPlay" />
-                        <div className="px-6 py-4">
-                            <div className="font-bold text-xl mb-2">StocPlay</div>
-                            <p className="text-gray-700 text-base">
-                                Trade virtual stocks to become more confident in the stock market. Live version <a
-                                    className="font-bold"
-                                    href="https://pages.git.generalassemb.ly/tsholbourn/stock-trader/">here</a> </p>
-                        </div>
-                        <div className="px-6 py-4">
-                            <span className="hashtag">#html</span>
-                            <span className="hashtag">#css</span>
-                            <span className="hashtag">#javascript</span>
-                        </div>
-                    </div> */}
-
-                    {/* <div className="project-card">
-                        <img className="w-full h-48 object-cover object-left-top" src={njtransit} alt="NJ Transit" />
-                        <div className="px-6 py-4">
-                            <div className="font-bold text-xl mb-2">NJ Transit</div>
-                            <p className="text-gray-700 text-base">
-                                UX and SEI Collaboration, taking UX Wireframes and building a functional prototype with full CRUD as a team. See the live version <a
-                                    className="font-bold"
-                                    href="https://nj-transit-mobile.herokuapp.com/">here</a> </p>
-                        </div>
-                        <div className="px-6 py-4">
-                            <span className="hashtag">#express</span>
-                            <span className="hashtag">#sequlize</span>
-                            <span className="hashtag">#react</span>
-                        </div>
-                    </div> */}
                 </div>
 
 

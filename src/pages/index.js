@@ -9,15 +9,18 @@ import Contact from "../components/Contact"
 import Projects from "../components/Projects"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithubSquare, faVimeoSquare, faLinkedin } from '@fortawesome/free-brands-svg-icons'
+import { faFilePdf } from '@fortawesome/free-solid-svg-icons'
 
 const randomRotations = [
   "rand-rotation-neg1", "rand-rotation-neg2", "rand-rotation-neg3", "rand-rotation-neg4",
   "rand-rotation-1", "rand-rotation-2", "rand-rotation-3", "rand-rotation-4"
 ]
 
+const randomRotationsIndex = Math.floor(Math.random() * randomRotations.length)
+
 const randomRotation = () =>
   (
-    randomRotations[Math.floor(Math.random() * randomRotation.length)]
+    randomRotations[randomRotationsIndex]
   )
 
 const IndexPage = () => (
@@ -43,7 +46,7 @@ const IndexPage = () => (
         </a>
       </p>
       <p>
-        And grab my resume  <a className="link-pink" href="https://trevorsmithholbourn.xyz/resume.pdf">here<FontAwesomeIcon icon={faGithubSquare} />
+        And grab my resume  <a className="link-pink" href="https://trevorsmithholbourn.xyz/resume.pdf">here<FontAwesomeIcon icon={faFilePdf} />
         </a>
       </p>
     </div >
