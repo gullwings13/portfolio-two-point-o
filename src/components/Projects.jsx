@@ -1,26 +1,13 @@
 import React, { Component } from 'react'
-import spacejumpfun from '../images/spacejumpfun.png'
-import polymino from '../images/polyminogardens.png'
-import vrprototype from '../images/vrprototype.png'
-import witchsword from '../images/witchsword.png'
-import stocplay from '../images/stocplay.png'
-import rmtradinggame from '../images/rmtradinggame.png'
-import njtransit from '../images/njtransit.png'
-import yaywalker from '../images/yaywalker.png'
-import tictactoe from '../images/tictactoe.png'
-import weather from '../images/weather.png'
-import portfolio from '../images/portfolio.png'
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faItchIo } from '@fortawesome/free-brands-svg-icons'
 
 import ProjectCard from './ProjectCard'
 
-
 const projects = [
     {
         title: "Yay!Walker",
-        image: yaywalker,
+        image: "yaywalker.png",
         description: <React.Fragment>
             User submitted walking tours. Ruby on Rails backend with React frontend.
         </React.Fragment>,
@@ -32,7 +19,7 @@ const projects = [
     },
     {
         title: "VR Prototype",
-        image: vrprototype,
+        image: "vrprototype.png",
         description: <React.Fragment>
             This VR prototype explores different firing mechanics. Watch a quick gameplay video below.
         </React.Fragment>,
@@ -44,7 +31,7 @@ const projects = [
     },
     {
         title: "Polymino Gardens",
-        image: polymino,
+        image: "polyminogardens.png",
         description: <React.Fragment>
             A puzzle game featuring an animated UI and procedural gardens. Download for PC and MAC at below
         </React.Fragment>,
@@ -56,7 +43,7 @@ const projects = [
     },
     {
         title: "Space Jump Fun",
-        image: spacejumpfun,
+        image: "spacejumpfun.png",
         description: <React.Fragment>
             A 2d platformer using c# interfaces.
         </React.Fragment>,
@@ -68,7 +55,7 @@ const projects = [
     },
     {
         title: "Witchsword",
-        image: witchsword,
+        image: "witchsword.png",
         description: <React.Fragment>
             The beginnings of an action RPG exploring VR elements.
         </React.Fragment>,
@@ -80,7 +67,7 @@ const projects = [
     },
     {
         title: "Stoc Play",
-        image: stocplay,
+        image: "stocplay.png",
         description: <React.Fragment>
             Trade virtual stock to gain confidence in stock trading. Built with Javascript, HTML and CSS. Features API request caching and works in conjunction with cloudflare worker to proxy API requests.
         </React.Fragment>,
@@ -92,7 +79,7 @@ const projects = [
     },
     {
         title: "Rick and Morty Trading Game",
-        image: rmtradinggame,
+        image: "rmtradinggame.png",
         description: <React.Fragment>
             Trade exotic goods while you explore the Rick and Morty Multiverse.
         </React.Fragment>,
@@ -104,7 +91,7 @@ const projects = [
     },
     {
         title: "NJ Transit Mobile",
-        image: njtransit,
+        image: "njtransit.png",
         description: <React.Fragment>
             UX and SEI Collaboration, taking UX Wireframes and building a functional prototype with full CRUD as a team.
         </React.Fragment>,
@@ -116,7 +103,7 @@ const projects = [
     },
     {
         title: "Portfolio",
-        image: portfolio,
+        image: "portfolio.png",
         description: <React.Fragment>
             Performant Gatsby.js static site featuring video landing and dynamic project filtering. You are here right now!
         </React.Fragment>,
@@ -126,7 +113,7 @@ const projects = [
     },
     {
         title: "Tic Tac Toe",
-        image: tictactoe,
+        image: "tictactoe.png",
         description: <React.Fragment>
             Tic tac toe featuring recursive minimax AI algorithm.
         </React.Fragment>,
@@ -138,7 +125,7 @@ const projects = [
     },
     {
         title: "Weather App",
-        image: weather,
+        image: "weather.png",
         description: <React.Fragment>
             Javscript weather app, querying the open weather API and rendering the results. Live site
         </React.Fragment>,

@@ -667,6 +667,7 @@ video {
   border-width: 1px;
   transition: transform .5s;
   transform-style: preserve-3d;
+  transform: perspective(1000px);
 }
 
 .project-card:hover{
@@ -703,38 +704,6 @@ video {
   background-size: 4px 50px;
   transform: rotate(0.4deg);
   transition: background-size .1s, transform .4s;
-}
-
-.rand-rotation-1{
-  transform: rotate(0.4deg);
-}
-
-.rand-rotation-2{
-  transform: rotate(0.8deg);
-}
-
-.rand-rotation-3{
-  transform: rotate(1.6deg);
-}
-
-.rand-rotation-4{
-  transform: rotate(2deg);
-}
-
-.rand-rotation-neg4{
-  transform: rotate(-2deg);
-}
-
-.rand-rotation-neg3{
-  transform: rotate(-1.6deg);
-}
-
-.rand-rotation-neg2{
-  transform: rotate(-0.8deg);
-}
-
-.rand-rotation-neg1{
-  transform: rotate(-0.4deg);
 }
 
 .videoContainer{

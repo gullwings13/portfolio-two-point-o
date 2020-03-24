@@ -1,15 +1,9 @@
 import React from "react"
-// import { Link } from "gatsby"
-
-
 import Layout from "../components/layout"
-// import Image from "../components/image"
 import SEO from "../components/seo"
 import Contact from "../components/Contact"
 import Projects from "../components/Projects"
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGithubSquare, faVimeoSquare, faLinkedin } from '@fortawesome/free-brands-svg-icons'
-import { faFilePdf } from '@fortawesome/free-solid-svg-icons'
+
 
 const randomRotations = [
   "rand-rotation-neg1", "rand-rotation-neg2", "rand-rotation-neg3", "rand-rotation-neg4",
