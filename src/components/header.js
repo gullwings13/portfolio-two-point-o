@@ -12,15 +12,17 @@ const Header = () => (
       <video autoPlay muted loop playsInline className="demoReelVideo">
         <source src={video} type="video/mp4" />
       </video>
-      <Tilt className=" absolute bottom-0 right-0 text-4xl">
-        <a href="https://vimeo.com/369092145" className="link-pink"><FontAwesomeIcon icon={faVimeoSquare} /></a>
+      <Tilt className=" absolute right-0 top-0 md:bottom-0 md:top-auto">
+        <a href="https://vimeo.com/369092145" className="link-pink">
+          <span className="sr-only">Demo Reel</span>
+          <FontAwesomeIcon className="text-4xl" icon={faVimeoSquare} /></a>
       </Tilt>
     </div>
-    <header className="absolute top-0 flex justify-center w-full text-center md:mt-24">
+    <header className="absolute top-0 flex justify-center w-full text-center mt-12 md:mt-24">
       <div>
         <h1>
           <Link className="font-mono text-3xl sm:text-4xl md:text-6xl bg-gray-900 mt-1 md:py-4 md:pt-1" to="/">
-            TREVOR SMITH-&#x2060;HOLBOURN
+            TReVoR SMith-&#x2060;holBouRN
           </Link>
         </h1>
         <h2 className="mt-2">

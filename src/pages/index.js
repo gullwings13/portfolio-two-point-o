@@ -5,18 +5,6 @@ import Contact from "../components/Contact"
 import Projects from "../components/Projects"
 
 
-const randomRotations = [
-  "rand-rotation-neg1", "rand-rotation-neg2", "rand-rotation-neg3", "rand-rotation-neg4",
-  "rand-rotation-1", "rand-rotation-2", "rand-rotation-3", "rand-rotation-4"
-]
-
-const randomRotationsIndex = Math.floor(Math.random() * randomRotations.length)
-
-const randomRotation = () =>
-  (
-    randomRotations[randomRotationsIndex]
-  )
-
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
@@ -34,7 +22,7 @@ const IndexPage = () => (
 
     <div id="projects" className="my-6 p-4 text-2xl">
       <span className="font-mono text-3xl bg-black">My Projects</span>
-      <Projects randomRotation={randomRotation} />
+      <Projects />
     </div>
 
     <div id="contact" className="my-6 p-4 text-2xl">

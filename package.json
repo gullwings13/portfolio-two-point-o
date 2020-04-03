@@ -31,6 +31,7 @@
     "tailwindcss": "^1.2.0"
   },
   "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^2.1.0",
     "prettier": "^1.19.1"
   },
   "keywords": [

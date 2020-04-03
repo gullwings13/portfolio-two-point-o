@@ -13,9 +13,7 @@ const projects = [
         </React.Fragment>,
         tags: ["react", "javascript", "tailwindcss", "css", "rubyonrails", "restfulapi"],
         github: "https://github.com/gullwings13/yay-walker",
-        livesite: <React.Fragment>
-            Visit<a className="link-pink font-serif text-center" href="https://aqueous-fortress-10362.herokuapp.com/" >Heroku</a>
-        </React.Fragment>
+        livesite: "https://aqueous-fortress-10362.herokuapp.com/"
     },
     {
         title: "VR Prototype",
@@ -25,9 +23,7 @@ const projects = [
         </React.Fragment>,
         tags: ["unity", "vr", "game"],
         github: null,
-        livesite: <React.Fragment>
-            Visit <a className="link-pink font-serif text-center" href="https://tsh.itch.io/vrprototype" >itch.io<FontAwesomeIcon icon={faItchIo} /></a>
-        </React.Fragment>
+        livesite: "https://tsh.itch.io/vrprototype"
     },
     {
         title: "Polymino Gardens",
@@ -37,9 +33,7 @@ const projects = [
         </React.Fragment>,
         tags: ["unity", "procedural", "game"],
         github: null,
-        livesite: <React.Fragment>
-            Visit <a className="link-pink font-serif text-center" href="https://tsh.itch.io/polyminogardens" >itch.io<FontAwesomeIcon icon={faItchIo} /></a>
-        </React.Fragment>
+        livesite: "https://tsh.itch.io/polyminogardens"
     },
     {
         title: "Space Jump Fun",
@@ -49,9 +43,7 @@ const projects = [
         </React.Fragment>,
         tags: ["unity", "interfaces", "game"],
         github: null,
-        livesite: <React.Fragment>
-            Visit <a className="link-pink font-serif text-center" href="https://tsh.itch.io/space-jump-fun" >itch.io<FontAwesomeIcon icon={faItchIo} /></a>
-        </React.Fragment>
+        livesite: "https://tsh.itch.io/space-jump-fun"
     },
     {
         title: "Witchsword",
@@ -61,9 +53,7 @@ const projects = [
         </React.Fragment>,
         tags: ["unity", "vr", "ai", "game"],
         github: null,
-        livesite: <React.Fragment>
-            Visit <a className="link-pink font-serif text-center" href="https://tsh.itch.io/witchswordv2" >itch.io<FontAwesomeIcon icon={faItchIo} /></a>
-        </React.Fragment>
+        livesite: "https://tsh.itch.io/witchswordv2"
     },
     {
         title: "Stoc Play",
@@ -73,9 +63,7 @@ const projects = [
         </React.Fragment>,
         tags: ["javascript", "css", "restfulapi"],
         github: "https://github.com/gullwings13/stoc-play",
-        livesite: <React.Fragment>
-            Visit <a className="link-pink font-serif text-center" href="https://gullwings13.github.io/stoc-play/" >Livesite</a>
-        </React.Fragment>
+        livesite: "https://gullwings13.github.io/stoc-play/"
     },
     {
         title: "Rick and Morty Trading Game",
@@ -85,9 +73,7 @@ const projects = [
         </React.Fragment>,
         tags: ["react", "javascript", "css", "restfulapi", "game"],
         github: "https://github.com/gullwings13/rm-trading-game",
-        livesite: <React.Fragment>
-            Visit <a className="link-pink font-serif text-center" href="http://trev-rm-trading-game.surge.sh/" >Surge</a>
-        </React.Fragment>
+        livesite: "http://trev-rm-trading-game.surge.sh/"
     },
     {
         title: "NJ Transit Mobile",
@@ -97,9 +83,7 @@ const projects = [
         </React.Fragment>,
         tags: ["react", "javascript", "express", "sequlize", "restfulapi"],
         github: "",
-        livesite: <React.Fragment>
-            Visit <a className="link-pink font-serif text-center" href="https://nj-transit-mobile.herokuapp.com/" >Heroku</a>
-        </React.Fragment>
+        livesite: "https://nj-transit-mobile.herokuapp.com/"
     },
     {
         title: "Portfolio",
@@ -119,9 +103,7 @@ const projects = [
         </React.Fragment>,
         tags: ["javascript", "css", "ai"],
         github: "https://github.com/gullwings13/tic-tac-toe",
-        livesite: <React.Fragment>
-            Visit <a className="link-pink font-serif text-center" href="https://gullwings13.github.io/tic-tac-toe/" >Livesite</a>
-        </React.Fragment>
+        livesite: "https://gullwings13.github.io/tic-tac-toe/"
     },
     {
         title: "Weather App",
@@ -131,9 +113,7 @@ const projects = [
         </React.Fragment>,
         tags: ["javascript", "css", "restfulapi"],
         github: "https://github.com/gullwings13/weather-app",
-        livesite: <React.Fragment>
-            Visit <a className="link-pink font-serif text-center" href="https://gullwings13.github.io/weather-app/" >Livesite</a>
-        </React.Fragment>
+        livesite: "https://gullwings13.github.io/weather-app/"
     }
 ]
 
@@ -206,7 +186,7 @@ export default class Projects extends Component
     {
         return (
             <React.Fragment>
-                <div>Filter by tech</div>
+                <div className="text-center">Filter by tech</div>
                 <div className="flex flex-wrap font-mono text-sm justify-center">
                     <button className="link-pink" onClick={() => { this.resetArray() }}>All</button>
                     {uniqueHashtags.map((hashtag, index) => (

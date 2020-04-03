@@ -23,27 +23,33 @@ export default function ProjectCard(props)
             transitionSpeed={1500}
             scale={1.03}
             gyroscope={true}
-            className="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 project-card">
+            className="w-full mx-10 sm:mx-20 md:w-1/2 lg:w-1/3 xl:w-1/4 project-card hover:border-pink-600">
 
-            <ProjectImage
-                className="w-full h-48 object-cover object-left-top translate-z-20px preserve-3d"
-                src={image}
-                alt={title} />
+            <div className="rounded-sm bg-indigo-400">
+                <a href={livesite}><ProjectImage
+                    className="w-full h-48 rounded-sm object-cover object-left-top border-gray-800 border hover:opacity-75 hover:border-pink-600"
+                    src={image}
+                    alt={title} /></a>
+            </div>
             <div className="px-4 py-4 h-32 xl:h-48">
-                <div className="font-bold text-indigo-200 text-lg mb-2 translate-z-20px">{title}</div>
+                <a href={livesite}>
+                    <div className="font-bold text-indigo-200 text-lg mb-2 translate-z-20px hover:underline">
+                        {title}
+                    </div>
+                </a>
                 <p className="text-gray-300 text-sm text-justify">
                     {description}
                 </p>
             </div>
             <div className="flex text-xs h-16">
                 <div className="px-1 py-1 flex flex-col w-1/6 items-center justify-end">
-                    {github ? <a className="link-pink font-serif" href={`${github}`}>GitHub</a> : ""}
+                    {github ? <a className="link-pink font-serif text-center" href={`${github}`}>Visit GitHub</a> : ""}
                 </div>
                 <div className="px-1 py-1 w-4/6 h-16 flex justify-center items-start flex-wrap-reverse">
                     {hashtags(tags)}
                 </div>
                 <div className="px-1 py-1 flex flex-col w-1/6 items-center justify-end">
-                    {livesite}
+                    {livesite ? <a className="link-pink font-serif text-center" href={`${livesite}`}>Visit Project</a> : ""}
                 </div>
             </div>
         </Tilt>
