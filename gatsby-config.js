@@ -3,7 +3,7 @@ module.exports = {
     title: `Portfolio | Trevor Smith-Holbourn`,
     description: `Software Engineer & Gameplay Programmer`,
     author: `Trevor Smith-Holbourn`,
-    description: `See past work, download resume and get in touch with Trevor`,
+    description: `Trevor is seeking new opportunities. Please visit to see past work, download his resume and get in touch with Trevor.`,
     siteUrl: `https://trevorsmithholbourn.xyz`,
     image: "portfolio.png",
     social: {
