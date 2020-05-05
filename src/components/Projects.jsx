@@ -1,6 +1,4 @@
 import React, { Component } from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faItchIo } from '@fortawesome/free-brands-svg-icons'
 
 import ProjectCard from './ProjectCard'
 
@@ -66,10 +64,10 @@ const projects = [
         livesite: "https://gullwings13.github.io/stoc-play/"
     },
     {
-        title: "Rick and Morty Trading Game",
+        title: "Multiverse Trading Game",
         image: "rmtradinggame.png",
         description: <React.Fragment>
-            Trade exotic goods while you explore the Rick and Morty Multiverse.
+            Trade exotic goods while you explore the Multiverse.
         </React.Fragment>,
         tags: ["react", "javascript", "css", "restfulapi", "game"],
         github: "https://github.com/gullwings13/rm-trading-game",
@@ -138,14 +136,14 @@ export default class Projects extends Component
         filter: null
     }
 
-    shuffleArray = (array) =>
-    {
-        for (let i = array.length - 1; i > 0; i--)
-        {
-            const j = Math.floor(Math.random() * (i + 1));
-            [array[i], array[j]] = [array[j], array[i]]
-        }
-    }
+    // shuffleArray = (array) =>
+    // {
+    //     for (let i = array.length - 1; i > 0; i--)
+    //     {
+    //         const j = Math.floor(Math.random() * (i + 1));
+    //         [array[i], array[j]] = [array[j], array[i]]
+    //     }
+    // }
 
     filterArray = (filter) =>
     {
@@ -175,7 +173,7 @@ export default class Projects extends Component
 
     componentDidMount()
     {
-        this.shuffleArray(projects)
+        // this.shuffleArray(projects)
         this.setState({
             projects: projects,
             filter: null

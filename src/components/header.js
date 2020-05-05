@@ -18,11 +18,13 @@ const Header = () => (
           <FontAwesomeIcon className="text-4xl" icon={faVimeoSquare} /></a>
       </Tilt>
     </div>
+    {/* <div className="videoContainer">
+    </div> */}
     <header className="absolute top-0 flex justify-center w-full text-center mt-12 md:mt-24">
       <div>
         <h1>
           <Link className="font-mono text-3xl sm:text-4xl md:text-6xl bg-gray-900 mt-1 md:py-4 md:pt-1" to="/">
-            TReVoR SMith-&#x2060;holBouRN
+            tReVoR sMith-&#x2060;holBouRN
           </Link>
         </h1>
         <h2 className="mt-2">
