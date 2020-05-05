@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Trevor Smith-Holbourn Portfolio`,
+    title: `Portfolio | Trevor Smith-Holbourn`,
     description: `Software Engineer & Gameplay Programmer`,
     author: `Trevor Smith-Holbourn`,
     description: `See past work, download resume and get in touch with Trevor`,

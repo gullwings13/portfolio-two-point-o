@@ -7,7 +7,7 @@ import Projects from "../components/Projects"
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Home" />
+    <SEO />
     <div id="about" className="my-6 p-4 text-2xl text-justify">
       <span className="font-mono text-3xl bg-black">About Me</span>
       <p className="mt-4">
@@ -16,17 +16,13 @@ const IndexPage = () => (
 
     </div >
 
-
-
-
-
     <div id="projects" className="my-6 p-4 text-2xl">
-      <span className="font-mono text-3xl bg-black">My Projects</span>
+      <span className="font-mono text-3xl bg-black">Work</span>
       <Projects />
     </div>
 
     <div id="contact" className="my-6 p-4 text-2xl">
-      <span className="font-mono text-3xl bg-black">Contact Me!</span>
+      <span className="font-mono text-3xl bg-black">Contact</span>
       <Contact />
     </div>
   </Layout >
