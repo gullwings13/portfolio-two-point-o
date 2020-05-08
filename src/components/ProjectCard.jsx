@@ -32,22 +32,22 @@ export default function ProjectCard(props)
                     objectPosition={`50% 0%`}
                     alt={title} /></a>
             </div>
-            <div className="px-2 py-1 h-40 xl:h-48 text-left">
+            <div className="px-2 py-1 h-32 xl:h-48 text-left">
                 <a className="link-pink font-bold font-serif mb-2 text-lg" href={livesite}>
                     {title}
                 </a>
-                <p className="text-gray-300 text-xs text-justify">
+                <p className="text-white text-sm font-light text-justify">
                     {description}
                 </p>
             </div>
-            <div className="flex justify-between text-xs h-16">
-                <div className="px-1 py-1 flex flex-col w-1/4 items-center justify-end">
+            <div className="flex justify-between text-xs h-10 md:h-16">
+                <div className="px-1 py-1 flex flex-col w-1/3 md:w-2/12 items-center justify-end">
                     {github ? <a className="link-pink font-serif text-center" target="_blank" href={`${github}`}>Visit GitHub</a> : ""}
                 </div>
-                <div className="px-1 py-1 w-1/3 h-16 flex justify-center flex-wrap-reverse">
+                <div className="hidden md:flex px-1 py-1 w-8/12 h-16 flex justify-center flex-wrap-reverse">
                     {hashtags(tags)}
                 </div>
-                <div className="px-1 py-1 flex flex-col w-1/4 items-center justify-end">
+                <div className="px-1 py-1 flex flex-col w-1/3 md:w-2/12 items-center justify-end">
                     {livesite ? <a className="link-pink font-serif text-center" target="_blank" href={`${livesite}`}>Visit Website</a> : ""}
                 </div>
             </div>
