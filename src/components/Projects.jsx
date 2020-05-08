@@ -64,7 +64,7 @@ export default class Projects extends Component
         return (
             <React.Fragment>
 
-                <div className="flex flex-wrap font-mono text-sm justify-center">
+                <div className="flex flex-wrap font-mono text-sm md:text-lg justify-center">
                     {/* <span className="text-center">Filter</span> */}
                     <button className="link-pink" onClick={() => { this.resetArray() }}>All</button>
                     {uniqueFilters.map((filter, index) => (
