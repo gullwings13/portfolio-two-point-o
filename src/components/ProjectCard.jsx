@@ -33,7 +33,7 @@ export default function ProjectCard(props)
                     alt={title} /></a>
             </div>
             <div className="px-2 py-1 h-32 xl:h-48 text-left">
-                <a className="link-pink font-bold font-serif mb-2 text-lg" href={livesite}>
+                <a className="link-pink font-bold font-serif mb-2 text-lg" target="_blank" href={livesite}>
                     {title}
                 </a>
                 <p className="text-white text-sm font-light text-justify">
