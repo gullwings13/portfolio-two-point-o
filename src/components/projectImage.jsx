@@ -1,9 +1,10 @@
 import safeGet from 'lodash.get'
 import React, { useMemo } from "react"
 import { graphql, useStaticQuery } from "gatsby"
-import Img from "gatsby-image"
 
-const Image = ({ src, ...props }) =>
+import Img from 'gatsby-image/withIEPolyfill';
+
+const Image = ({ src, objectPosition, ...props }) =>
 {
   const data = useStaticQuery(graphql`
     query {
@@ -28,6 +29,7 @@ const Image = ({ src, ...props }) =>
 
   return fluid ? (
     <Img
+      objectPosition={objectPosition}
       fluid={fluid}
       Tag='div'
       {...props}

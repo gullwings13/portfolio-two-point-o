@@ -20,7 +20,7 @@ export default class Contact extends React.Component
         return (
 
             <React.Fragment>
-                <form className="text-2xl mt-4 text-justify"
+                <form className="text-lg sm:text-xl md:text-2xl mt-4 text-justify"
                     onSubmit={this.submitForm}
                     action="https://formspree.io/mwkqbanl"
                     method="POST"
@@ -32,7 +32,7 @@ export default class Contact extends React.Component
                             <label>Your Email:
                             <input
                                     className="bg-white focus:outline-none focus:shadow-outline border border-gray-300 rounded-lg py-2 px-4 block w-full appearance-none leading-normal"
-                                    placeholder="jane@example.com"
+                                    placeholder="you@example.com"
                                     type="email"
                                     name="email" />
                             </label>

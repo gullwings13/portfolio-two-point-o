@@ -6,6 +6,13 @@ module.exports = {
       fontFamily: {
         serif: ['Roboto Slab', ...defaultTheme.fontFamily.serif],
         mono: ["Major Mono Display", ...defaultTheme.fontFamily.mono],
+      },
+      spacing: {
+        '72': '18rem',
+        '80': '20rem',
+        '84': '21rem',
+        '96': '24rem',
+        '100': '25rem',
       }
     },
   },

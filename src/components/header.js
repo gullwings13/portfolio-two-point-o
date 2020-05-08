@@ -37,7 +37,7 @@ const Header = () => (
       <AnchorLink to="/#about" title="About" className="sm:w-1/3 sm:text-left">
         <span className="sm:text-2xl link-pink">About</span>
       </AnchorLink>
-      <AnchorLink to="/#projects" title="Projects" className="sm:w-1/3 sm:text-center">
+      <AnchorLink to="/#work" title="Projects" className="sm:w-1/3 sm:text-center">
         <span className="sm:text-2xl link-pink">Work</span>
       </AnchorLink>
       <AnchorLink to="/#contact" title="Contact" className="sm:w-1/3 sm:text-right">
