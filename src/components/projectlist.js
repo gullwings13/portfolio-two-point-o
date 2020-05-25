@@ -2,6 +2,33 @@ import React from 'react'
 
 export const projects = [
     {
+        title: "Fetch",
+        image: "fetch.png",
+        description: "Hackathon winning team project with realtime chat. Login using sam@company.com, no password",
+        tags: ["react", "javascript", "actioncable", "tailwindcss", "rubyonrails"],
+        filters: ["frontend", "fullstack"],
+        github: "https://github.com/ehighberg/fetch",
+        livesite: "https://fetch-hs.netlify.app/"
+    },
+    {
+        title: "BroodBattle",
+        image: "broodbattle.png",
+        description: "A realtime multiplayer, multiroom quiz game.",
+        tags: ["react", "javascript", "tailwindcss", "expressjs", "socketjs"],
+        filters: ["frontend", "fullstack"],
+        github: null,
+        livesite: "https://brood-battle.netlify.app/"
+    },
+    {
+        title: "Paprika.Studio",
+        image: "paprikastudio.png",
+        description: "Custom Gatsby Static Markdown blog with automatic darktheme CSS. ",
+        tags: ["gatsby", "react", "javascript"],
+        filters: ["frontend"],
+        github: null,
+        livesite: "https://test-1122334455.netlify.app/"
+    },
+    {
         title: "Yay!Walker",
         image: "yaywalker.png",
         description: "User submitted walking tours. Ruby on Rails backend with React frontend.",
@@ -38,15 +65,6 @@ export const projects = [
         livesite: "https://tsh.itch.io/vrprototype"
     },
     {
-        title: "Space Jump Fun",
-        image: "spacejumpfun.png",
-        description: "A 2d platformer using c# interfaces.",
-        tags: ["unity", "interfaces", "game"],
-        filters: ["unity/c#"],
-        github: null,
-        livesite: "https://tsh.itch.io/space-jump-fun"
-    },
-    {
         title: "Multiverse Trading Game",
         image: "rmtradinggame.png",
         description: "Trade exotic goods while you explore the Multiverse.",
@@ -56,13 +74,13 @@ export const projects = [
         livesite: "http://trev-rm-trading-game.surge.sh/"
     },
     {
-        title: "Witchsword",
-        image: "witchsword.png",
-        description: "The beginnings of an action RPG exploring VR elements.",
-        tags: ["unity", "vr", "ai", "game"],
+        title: "Space Jump Fun",
+        image: "spacejumpfun.png",
+        description: "A 2d platformer using c# interfaces.",
+        tags: ["unity", "interfaces", "game"],
         filters: ["unity/c#"],
         github: null,
-        livesite: "https://tsh.itch.io/witchswordv2"
+        livesite: "https://tsh.itch.io/space-jump-fun"
     },
     {
         title: "NJ Transit Mobile",
@@ -74,13 +92,22 @@ export const projects = [
         livesite: "https://nj-transit-mobile.herokuapp.com/"
     },
     {
-        title: "Portfolio",
-        image: "portfolio.png",
-        description: "Performant Gatsby.js static site featuring video landing and dynamic project filtering. You are here right now!",
-        tags: ["gatsby", "javascript", "tailwindcss", "graphql"],
+        title: "Witchsword",
+        image: "witchsword.png",
+        description: "The beginnings of an action RPG exploring VR elements.",
+        tags: ["unity", "vr", "ai", "game"],
+        filters: ["unity/c#"],
+        github: null,
+        livesite: "https://tsh.itch.io/witchswordv2"
+    },
+    {
+        title: "Weather App",
+        image: "weather.png",
+        description: "Javscript weather app, querying the open weather API and rendering the results.",
+        tags: ["javascript", "css", "restfulapi"],
         filters: ["frontend"],
-        github: "https://github.com/gullwings13/portfolio-two-point-o",
-        livesite: ""
+        github: "https://github.com/gullwings13/weather-app",
+        livesite: "https://gullwings13.github.io/weather-app/"
     },
     {
         title: "Tic Tac Toe",
@@ -92,12 +119,12 @@ export const projects = [
         livesite: "https://gullwings13.github.io/tic-tac-toe/"
     },
     {
-        title: "Weather App",
-        image: "weather.png",
-        description: "Javscript weather app, querying the open weather API and rendering the results.",
-        tags: ["javascript", "css", "restfulapi"],
+        title: "Portfolio",
+        image: "portfolio.png",
+        description: "Performant Gatsby.js static site featuring video landing and dynamic project filtering. You are here right now!",
+        tags: ["gatsby", "javascript", "tailwindcss", "graphql"],
         filters: ["frontend"],
-        github: "https://github.com/gullwings13/weather-app",
-        livesite: "https://gullwings13.github.io/weather-app/"
+        github: "https://github.com/gullwings13/portfolio-two-point-o",
+        livesite: ""
     }
 ]
