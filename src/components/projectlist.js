@@ -9,7 +9,7 @@ export const projects = [
         livesite: "https://fetch-hs.netlify.app/"
     },
     {
-        title: "BroodBattle",
+        title: "Brood Battle",
         image: "broodbattle.png",
         description: "Realtime multiplayer, multiroom quiz game using socket.io. Tested with artillery.io",
         tags: ["react", "javascript", "tailwindcss", "expressjs", "socket.io"],
@@ -99,7 +99,7 @@ export const projects = [
         livesite: "https://nj-transit-mobile.herokuapp.com/"
     },
     {
-        title: "Witchsword",
+        title: "Witch Sword",
         image: "witchsword.png",
         description: "Action RPG exploring VR elements and platforming gameplay",
         tags: ["unity", "vr", "ai", "game"],
