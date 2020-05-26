@@ -1,4 +1,3 @@
-import { Link } from "gatsby"
 import { AnchorLink } from "gatsby-plugin-anchor-links"
 import React from "react"
 // import Tilt from 'react-parallax-tilt'
@@ -23,9 +22,9 @@ const Header = () => (
     <header className="absolute top-0 flex justify-center w-full text-center mt-12 md:mt-24">
       <div>
         <h1>
-          <Link className="font-mono text-3xl sm:text-4xl md:text-6xl bg-gray-900 mt-1 md:py-4 md:pt-1" to="/">
+          <div className="font-mono text-3xl sm:text-4xl md:text-6xl bg-gray-900 mt-1 md:py-4 md:pt-1" to="/">
             tReVoR sMith-&#x2060;holbouRN
-          </Link>
+          </div>
         </h1>
         <h2 className="mt-2">
           <span className="font-serif font-thin text-xl sm:text-2xl md:text-4xl mt-1 md:p-4 md:pt-1 bg-gray-900">Software Engineer & Gameplay Programmer</span>
@@ -41,7 +40,7 @@ const Header = () => (
         <span className="sm:text-2xl link-pink">Work</span>
       </AnchorLink>
       <AnchorLink to="/#contact" title="Contact" className="sm:w-1/3 sm:text-right">
-        <span className="sm:text-2xl link-pink">Contact</span>
+        <span className="sm:text-2xl link-pink">contact</span>
       </AnchorLink>
     </nav>
   </React.Fragment>
