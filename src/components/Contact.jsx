@@ -54,16 +54,16 @@ export default class Contact extends React.Component
                 <div className="text-right">
                     <p className="mt-4">You can also find me on:</p>
                     <p>
-                        <a className="link-pink" target="_blank" href="https://github.com/gullwings13/">Github<FontAwesomeIcon icon={faGithubSquare} />
+                        <a className="link-pink" target="_blank" rel="noopener noreferrer" href="https://github.com/gullwings13/">Github<FontAwesomeIcon icon={faGithubSquare} />
                         </a>
                     </p>
                     <p>
-                        <a className="link-pink" target="_blank" href="https://www.linkedin.com/in/trevor-smith-holbourn/">Linkedin<FontAwesomeIcon icon={faLinkedin} />
+                        <a className="link-pink" target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/trevor-smith-holbourn/">Linkedin<FontAwesomeIcon icon={faLinkedin} />
                         </a>
                     </p>
                     <p>
                         And grab my resume:</p>
-                    <p>  <a className="link-pink" target="_blank" href={'/resume.pdf'}>here<FontAwesomeIcon icon={faFilePdf} />
+                    <p>  <a className="link-pink" target="_blank" rel="noopener noreferrer" href={'/resume.pdf'}>here<FontAwesomeIcon icon={faFilePdf} />
                         </a>
                     </p>
                 </div>

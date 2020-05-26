@@ -24,7 +24,7 @@ const Header = () => (
       <div>
         <h1>
           <Link className="font-mono text-3xl sm:text-4xl md:text-6xl bg-gray-900 mt-1 md:py-4 md:pt-1" to="/">
-            tReVoR sMith-&#x2060;holBouRN
+            tReVoR sMith-&#x2060;holbouRN
           </Link>
         </h1>
         <h2 className="mt-2">

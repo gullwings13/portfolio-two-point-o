@@ -68,10 +68,10 @@ export default class Projects extends Component
                     {/* <span className="text-center">Filter</span> */}
                     <button className="link-pink" onClick={() => { this.resetArray() }}>All</button>
                     {uniqueFilters.map((filter, index) => (
-                        <button key={index} className="link-pink capitalize mx-1" onClick={() =>
+                        <button key={index} className="link-pink mx-1" onClick={() =>
                         {
                             this.filterArray(filter.toLowerCase())
-                        }}>{filter}</button>
+                        }}>{filter.toLowerCase()}</button>
                     ))}
                 </div>
                 <div className="flex flex-wrap justify-center">

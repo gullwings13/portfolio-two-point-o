@@ -1,10 +1,44 @@
-import React from 'react'
-
 export const projects = [
+    {
+        title: "Fetch",
+        image: "fetch.png",
+        description: "Internal company directory with realtime chat. May 2020 GA / DataDog Hackathon winning team. To view login with sam@company.com with no password",
+        tags: ["react", "javascript", "tailwindcss", "rubyonrails"],
+        filters: ["frontend", "fullstack"],
+        github: "https://github.com/ehighberg/fetch",
+        livesite: "https://fetch-hs.netlify.app/"
+    },
+    {
+        title: "BroodBattle",
+        image: "broodbattle.png",
+        description: "Realtime multiplayer, multiroom quiz game using socket.io. Tested with artillery.io",
+        tags: ["react", "javascript", "tailwindcss", "expressjs", "socket.io"],
+        filters: ["frontend", "fullstack"],
+        github: null,
+        livesite: "https://brood-battle.netlify.app/"
+    },
+    {
+        title: "Paprika.Studio",
+        image: "paprikastudio.png",
+        description: "Custom Gatsby static markdown blog with automatic darktheme CSS",
+        tags: ["gatsby", "react", "javascript"],
+        filters: ["frontend"],
+        github: null,
+        livesite: "https://test-1122334455.netlify.app/"
+    },
+    {
+        title: "Orbital Simulation",
+        image: "orbital.png",
+        description: "Orbital simulation toy using Unity DOTS/ECS and Unity cloud build",
+        tags: ["gatsby", "react", "javascript"],
+        filters: ["frontend"],
+        github: "https://github.com/gullwings13/legendary-octo-guacamole",
+        livesite: "https://tsh.itch.io/orbital-simulation"
+    },
     {
         title: "Yay!Walker",
         image: "yaywalker.png",
-        description: "User submitted walking tours. Ruby on Rails backend with React frontend.",
+        description: "User submitted walking tours. Ruby on Rails backend with React frontend",
         tags: ["react", "javascript", "tailwindcss", "rubyonrails"],
         filters: ["frontend", "fullstack"],
         github: "https://github.com/gullwings13/yay-walker",
@@ -13,7 +47,7 @@ export const projects = [
     {
         title: "Polymino Gardens",
         image: "polyminogardens.png",
-        description: "A puzzle game featuring an animated UI and procedural gardens. Download for PC and MAC at below",
+        description: "Tile base pattern matching puzzle game with an an animated UI and procedural gardens",
         tags: ["unity", "procedural", "game"],
         filters: ["unity/c#"],
         github: null,
@@ -22,7 +56,7 @@ export const projects = [
     {
         title: "Stoc Play",
         image: "stocplay.png",
-        description: "Trade virtual stock to gain confidence in stock trading. Built with Javascript, HTML and CSS. Features API request caching and works in conjunction with cloudflare worker to proxy API requests.",
+        description: "Trade virtual stock to gain confidence. Built with Javascript, HTML and CSS. Features API request caching and works in conjunction with cloudflare worker to proxy API requests.",
         tags: ["javascript", "css", "restfulapi"],
         filters: ["frontend"],
         github: "https://github.com/gullwings13/stoc-play",
@@ -31,38 +65,29 @@ export const projects = [
     {
         title: "VR Prototype",
         image: "vrprototype.png",
-        description: "This VR prototype explores different firing mechanics. Watch a quick gameplay video below.",
+        description: "This VR prototype explores different firing mechanics. Incorporating steam VR API",
         tags: ["unity", "vr", "game"],
         filters: ["unity/c#"],
         github: null,
         livesite: "https://tsh.itch.io/vrprototype"
     },
     {
-        title: "Space Jump Fun",
-        image: "spacejumpfun.png",
-        description: "A 2d platformer using c# interfaces.",
-        tags: ["unity", "interfaces", "game"],
-        filters: ["unity/c#"],
-        github: null,
-        livesite: "https://tsh.itch.io/space-jump-fun"
-    },
-    {
         title: "Multiverse Trading Game",
         image: "rmtradinggame.png",
-        description: "Trade exotic goods while you explore the Multiverse.",
+        description: "Trade exotic goods while you explore the Multiverse in this React Single Page App",
         tags: ["react", "javascript", "css", "restfulapi"],
         filters: ["frontend"],
         github: "https://github.com/gullwings13/rm-trading-game",
         livesite: "http://trev-rm-trading-game.surge.sh/"
     },
     {
-        title: "Witchsword",
-        image: "witchsword.png",
-        description: "The beginnings of an action RPG exploring VR elements.",
-        tags: ["unity", "vr", "ai", "game"],
+        title: "Space Jump Fun",
+        image: "spacejumpfun.png",
+        description: "A casual 2d platformer using c# interfaces and floaty jumping physics",
+        tags: ["unity", "interfaces", "game"],
         filters: ["unity/c#"],
         github: null,
-        livesite: "https://tsh.itch.io/witchswordv2"
+        livesite: "https://tsh.itch.io/space-jump-fun"
     },
     {
         title: "NJ Transit Mobile",
@@ -74,6 +99,33 @@ export const projects = [
         livesite: "https://nj-transit-mobile.herokuapp.com/"
     },
     {
+        title: "Witchsword",
+        image: "witchsword.png",
+        description: "Action RPG exploring VR elements and platforming gameplay",
+        tags: ["unity", "vr", "ai", "game"],
+        filters: ["unity/c#"],
+        github: null,
+        livesite: "https://tsh.itch.io/witchswordv2"
+    },
+    {
+        title: "Weather App",
+        image: "weather.png",
+        description: "Javscript weather app using open weather API with local storage",
+        tags: ["javascript", "css", "restfulapi"],
+        filters: ["frontend"],
+        github: "https://github.com/gullwings13/weather-app",
+        livesite: "https://gullwings13.github.io/weather-app/"
+    },
+    {
+        title: "Tic Tac Toe",
+        image: "tictactoe.png",
+        description: "Tic tac toe featuring multiplayer and recursive minimax AI algorithm",
+        tags: ["javascript", "css", "ai"],
+        filters: ["frontend"],
+        github: "https://github.com/gullwings13/tic-tac-toe",
+        livesite: "https://gullwings13.github.io/tic-tac-toe/"
+    },
+    {
         title: "Portfolio",
         image: "portfolio.png",
         description: "Performant Gatsby.js static site featuring video landing and dynamic project filtering. You are here right now!",
@@ -81,23 +133,5 @@ export const projects = [
         filters: ["frontend"],
         github: "https://github.com/gullwings13/portfolio-two-point-o",
         livesite: ""
-    },
-    {
-        title: "Tic Tac Toe",
-        image: "tictactoe.png",
-        description: "Tic tac toe featuring recursive minimax AI algorithm.",
-        tags: ["javascript", "css", "ai"],
-        filters: ["frontend"],
-        github: "https://github.com/gullwings13/tic-tac-toe",
-        livesite: "https://gullwings13.github.io/tic-tac-toe/"
-    },
-    {
-        title: "Weather App",
-        image: "weather.png",
-        description: "Javscript weather app, querying the open weather API and rendering the results.",
-        tags: ["javascript", "css", "restfulapi"],
-        filters: ["frontend"],
-        github: "https://github.com/gullwings13/weather-app",
-        livesite: "https://gullwings13.github.io/weather-app/"
     }
 ]
