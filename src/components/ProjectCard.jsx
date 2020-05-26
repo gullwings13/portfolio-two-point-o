@@ -47,7 +47,7 @@ export default function ProjectCard(props)
                 <div className="px-1 py-1 flex flex-col w-1/3 md:w-2/12 items-center justify-end">
                     {github ? <a className="link-pink font-serif text-center" target="_blank" rel="noopener noreferrer" href={`${github}`}>Visit GitHub</a> : ""}
                 </div>
-                <div className="hidden md:flex px-1 py-1 w-8/12 h-16 flex justify-center flex-wrap-reverse">
+                <div className="hidden md:flex px-1 py-1 w-8/12 h-20 justify-center flex-wrap content-end">
                     {hashtags(tags)}
                 </div>
                 <div className="px-1 py-1 flex flex-col w-1/3 md:w-2/12 items-center justify-end">

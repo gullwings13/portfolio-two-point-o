@@ -2,8 +2,8 @@ export const projects = [
     {
         title: "Fetch",
         image: "fetch.png",
-        description: "Hackathon winning team project with realtime chat. Login using sam@company.com, no password",
-        tags: ["react", "javascript", "actioncable", "tailwindcss", "rubyonrails"],
+        description: "Internal company directory with realtime chat. May 2020 GA / DataDog Hackathon winning team. To view login with sam@company.com with no password",
+        tags: ["react", "javascript", "tailwindcss", "rubyonrails"],
         filters: ["frontend", "fullstack"],
         github: "https://github.com/ehighberg/fetch",
         livesite: "https://fetch-hs.netlify.app/"
@@ -11,8 +11,8 @@ export const projects = [
     {
         title: "BroodBattle",
         image: "broodbattle.png",
-        description: "A realtime multiplayer, multiroom quiz game.",
-        tags: ["react", "javascript", "tailwindcss", "expressjs", "socketjs"],
+        description: "Realtime multiplayer, multiroom quiz game using socket.io. Tested with artillery.io",
+        tags: ["react", "javascript", "tailwindcss", "expressjs", "socket.io"],
         filters: ["frontend", "fullstack"],
         github: null,
         livesite: "https://brood-battle.netlify.app/"
@@ -20,7 +20,7 @@ export const projects = [
     {
         title: "Paprika.Studio",
         image: "paprikastudio.png",
-        description: "Custom Gatsby Static Markdown blog with automatic darktheme CSS. ",
+        description: "Custom Gatsby static markdown blog with automatic darktheme CSS",
         tags: ["gatsby", "react", "javascript"],
         filters: ["frontend"],
         github: null,
@@ -29,7 +29,7 @@ export const projects = [
     {
         title: "Orbital Simulation",
         image: "orbital.png",
-        description: "Orbital Simulation Toy using unity DOTS/ECS and Unity cloud build.",
+        description: "Orbital simulation toy using Unity DOTS/ECS and Unity cloud build",
         tags: ["gatsby", "react", "javascript"],
         filters: ["frontend"],
         github: "https://github.com/gullwings13/legendary-octo-guacamole",
@@ -38,7 +38,7 @@ export const projects = [
     {
         title: "Yay!Walker",
         image: "yaywalker.png",
-        description: "User submitted walking tours. Ruby on Rails backend with React frontend.",
+        description: "User submitted walking tours. Ruby on Rails backend with React frontend",
         tags: ["react", "javascript", "tailwindcss", "rubyonrails"],
         filters: ["frontend", "fullstack"],
         github: "https://github.com/gullwings13/yay-walker",
@@ -47,7 +47,7 @@ export const projects = [
     {
         title: "Polymino Gardens",
         image: "polyminogardens.png",
-        description: "A puzzle game featuring an animated UI and procedural gardens. Download for PC and MAC at below",
+        description: "Tile base pattern matching puzzle game with an an animated UI and procedural gardens",
         tags: ["unity", "procedural", "game"],
         filters: ["unity/c#"],
         github: null,
@@ -56,7 +56,7 @@ export const projects = [
     {
         title: "Stoc Play",
         image: "stocplay.png",
-        description: "Trade virtual stock to gain confidence in stock trading. Built with Javascript, HTML and CSS. Features API request caching and works in conjunction with cloudflare worker to proxy API requests.",
+        description: "Trade virtual stock to gain confidence. Built with Javascript, HTML and CSS. Features API request caching and works in conjunction with cloudflare worker to proxy API requests.",
         tags: ["javascript", "css", "restfulapi"],
         filters: ["frontend"],
         github: "https://github.com/gullwings13/stoc-play",
@@ -65,7 +65,7 @@ export const projects = [
     {
         title: "VR Prototype",
         image: "vrprototype.png",
-        description: "This VR prototype explores different firing mechanics. Watch a quick gameplay video below.",
+        description: "This VR prototype explores different firing mechanics. Incorporating steam VR API",
         tags: ["unity", "vr", "game"],
         filters: ["unity/c#"],
         github: null,
@@ -74,7 +74,7 @@ export const projects = [
     {
         title: "Multiverse Trading Game",
         image: "rmtradinggame.png",
-        description: "Trade exotic goods while you explore the Multiverse.",
+        description: "Trade exotic goods while you explore the Multiverse in this React Single Page App",
         tags: ["react", "javascript", "css", "restfulapi"],
         filters: ["frontend"],
         github: "https://github.com/gullwings13/rm-trading-game",
@@ -83,7 +83,7 @@ export const projects = [
     {
         title: "Space Jump Fun",
         image: "spacejumpfun.png",
-        description: "A 2d platformer using c# interfaces.",
+        description: "A casual 2d platformer using c# interfaces and floaty jumping physics",
         tags: ["unity", "interfaces", "game"],
         filters: ["unity/c#"],
         github: null,
@@ -101,7 +101,7 @@ export const projects = [
     {
         title: "Witchsword",
         image: "witchsword.png",
-        description: "The beginnings of an action RPG exploring VR elements.",
+        description: "Action RPG exploring VR elements and platforming gameplay",
         tags: ["unity", "vr", "ai", "game"],
         filters: ["unity/c#"],
         github: null,
@@ -110,7 +110,7 @@ export const projects = [
     {
         title: "Weather App",
         image: "weather.png",
-        description: "Javscript weather app, querying the open weather API and rendering the results.",
+        description: "Javscript weather app using open weather API with local storage",
         tags: ["javascript", "css", "restfulapi"],
         filters: ["frontend"],
         github: "https://github.com/gullwings13/weather-app",
@@ -119,7 +119,7 @@ export const projects = [
     {
         title: "Tic Tac Toe",
         image: "tictactoe.png",
-        description: "Tic tac toe featuring recursive minimax AI algorithm.",
+        description: "Tic tac toe featuring multiplayer and recursive minimax AI algorithm",
         tags: ["javascript", "css", "ai"],
         filters: ["frontend"],
         github: "https://github.com/gullwings13/tic-tac-toe",
