@@ -30,8 +30,8 @@ export const projects = [
         title: "Orbital Simulation",
         image: "orbital.png",
         description: "Orbital simulation toy using Unity DOTS/ECS and Unity cloud build",
-        tags: ["gatsby", "react", "javascript"],
-        filters: ["frontend"],
+        tags: ["unity", "ECS/DOTS", "toy"],
+        filters: ["unity/c#"],
         github: "https://github.com/gullwings13/legendary-octo-guacamole",
         livesite: "https://tsh.itch.io/orbital-simulation"
     },
