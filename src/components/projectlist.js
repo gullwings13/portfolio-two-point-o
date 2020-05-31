@@ -29,7 +29,7 @@ export const projects = [
     {
         title: "Orbital Simulation",
         image: "orbital.png",
-        description: "Orbital simulation toy using Unity DOTS/ECS and Unity cloud build",
+        description: "Orbital simulation toy using Unity DOTS/ECS and Unity cloud build. Supports thousands of orbiting bodies",
         tags: ["unity", "ECS/DOTS", "toy"],
         filters: ["unity/c#"],
         github: "https://github.com/gullwings13/legendary-octo-guacamole",
@@ -47,7 +47,7 @@ export const projects = [
     {
         title: "Polymino Gardens",
         image: "polyminogardens.png",
-        description: "Tile base pattern matching puzzle game with an an animated UI and procedural gardens",
+        description: "Tile base pattern matching puzzle game with an animated UI and procedural gardens",
         tags: ["unity", "procedural", "game"],
         filters: ["unity/c#"],
         github: null,
