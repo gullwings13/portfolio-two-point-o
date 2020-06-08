@@ -77,6 +77,7 @@ function SEO({ lang, meta })
           content: metaImage
         },
         {
+          name: `image`,
           property: `og:image`,
           content: metaImage
         },
