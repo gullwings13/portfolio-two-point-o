@@ -19,20 +19,20 @@ const Header = () => (
     </div>
     {/* <div className="videoContainer">
     </div> */}
-    <header className="absolute top-0 flex justify-center w-full text-center mt-12 md:mt-24">
+    <header className="slide-in-from-top absolute top-0 flex justify-center w-full text-center mt-12 md:mt-24">
       <div>
         <h1>
-          <div className="font-mono text-3xl sm:text-4xl md:text-6xl bg-gray-900 mt-1 md:py-4 md:pt-1" to="/">
+          <div className="slide-in-from-top font-mono text-3xl sm:text-4xl md:text-6xl bg-gray-900 mt-1 md:py-4 md:pt-1" to="/">
             tReVoR sMith-&#x2060;holbouRN
           </div>
         </h1>
-        <h2 className="mt-2">
+        <h2 className="slide-in-from-top mt-2">
           <span className="font-serif font-thin text-xl sm:text-2xl md:text-4xl mt-1 md:p-4 md:pt-1 bg-gray-900">Software Engineer & Gameplay Programmer</span>
         </h2>
       </div>
 
     </header>
-    <nav className="flex justify-between w-full fixed bg-gray-900 p-3 md:pt-1 bottom-0 md:top-0 md:bottom-auto z-10">
+    <nav className=" slide-in-from-top flex justify-between w-full fixed bg-gray-900 p-3 md:pt-1 bottom-0 md:top-0 md:bottom-auto z-10">
       <AnchorLink to="/#about" title="About" className="sm:w-1/3 sm:text-left">
         <span className="sm:text-2xl link-pink">About</span>
       </AnchorLink>

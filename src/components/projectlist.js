@@ -2,7 +2,7 @@ export const projects = [
     {
         title: "Fetch",
         image: "fetch.png",
-        description: "Internal company directory with realtime chat. May 2020 GA / DataDog Hackathon winning team",
+        description: "Internal company directory with realtime chat. May 2020 GA / DataDog Hackathon winning team 🏆",
         tags: ["react", "javascript", "tailwindcss", "rubyonrails"],
         filters: ["frontend", "fullstack"],
         github: "https://github.com/ehighberg/fetch",

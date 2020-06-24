@@ -45,7 +45,7 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "buildcss": "postcss ./src/style/tailwind.css -o ./src/style/style.css",
+    "css": "postcss ./src/style/tailwind.css -o ./src/style/style.css",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "repository": {

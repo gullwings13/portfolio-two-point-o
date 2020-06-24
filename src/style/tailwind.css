@@ -81,6 +81,25 @@
   object-position: center;
 }
 
+@keyframes slideInFromTop {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.slide-in-from-top {  
+  animation: 3s ease-out 0s 1 slideInFromTop;
+}
+
 *{
   @apply font-serif text-gray-300 font-thin;
   transition: 0.1s;
