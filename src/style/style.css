@@ -708,13 +708,23 @@ video {
 .link-pink-hover{
   background-size: 4px 50px;
   transform: rotate(0.4deg);
-  transition: background-size .1s, transform .4s;
+  transition: background-size .2s, transform .4s;
+}
+
+.link-pink:focus{
+  outline-color: pink;
 }
 
 .link-pink:hover{
   background-size: 4px 50px;
   transform: rotate(0.4deg);
-  transition: background-size .1s, transform .4s
+  transition: background-size .2s, transform .4s;
+}
+
+.link-pink-active{
+  background-size: 4px 50px;
+  transform: rotate(0.4deg);
+  transition: background-size .2s, transform .4s;
 }
 
 .videoContainer{
@@ -778,6 +788,11 @@ video {
   color: #e2e8f0;
   font-weight: 200;
   transition: 0.1s;
+  -ms-overflow-style: none;
+}
+
+*::-webkit-scrollbar {
+  display: none
 }
 
 body {

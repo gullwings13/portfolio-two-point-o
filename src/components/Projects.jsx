@@ -3,6 +3,7 @@ import React, { Component } from 'react'
 import ProjectCard from './ProjectCard'
 
 import { projects } from './projectlist'
+import { Link } from 'gatsby'
 
 const getFilters = (projects) =>
 {
@@ -66,9 +67,9 @@ export default class Projects extends Component
 
                 <div className="flex flex-wrap font-mono text-sm md:text-lg justify-center">
                     {/* <span className="text-center">Filter</span> */}
-                    <button className="link-pink" onClick={() => { this.resetArray() }}>All</button>
+                    <button className={`link-pink${this.state.filter === null ? ' link-pink-active' : ''}`} onClick={() => { this.resetArray() }}>All</button>
                     {uniqueFilters.map((filter, index) => (
-                        <button key={index} className="link-pink mx-1" onClick={() =>
+                        <button key={index} className={`link-pink mx-1${this.state.filter === filter ? ' link-pink-active' : ''}`} onClick={() =>
                         {
                             this.filterArray(filter.toLowerCase())
                         }}>{filter.toLowerCase()}</button>
