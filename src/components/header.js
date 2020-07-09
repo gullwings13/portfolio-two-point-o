@@ -4,13 +4,15 @@ import React from "react"
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 // import { faVimeoSquare } from '@fortawesome/free-brands-svg-icons'
 import video from "../media/Webshort.mp4"
+import AnimatedHero from "./AnimatedHero"
 
 const Header = () => (
   <React.Fragment>
     <div className="videoContainer">
-      <video autoPlay muted loop playsInline className="demoReelVideo">
+      {/* <video autoPlay muted loop playsInline className="demoReelVideo">
         <source src={video} type="video/mp4" />
-      </video>
+      </video> */}
+      <AnimatedHero/>
       {/* <Tilt className=" absolute right-0 top-0 md:bottom-0 md:top-auto">
         <a href="https://vimeo.com/369092145" className="link-pink">
           <span className="sr-only">Demo Reel</span>
@@ -19,7 +21,7 @@ const Header = () => (
     </div>
     {/* <div className="videoContainer">
     </div> */}
-    <header className="slide-in-from-top absolute top-0 flex justify-center w-full text-center mt-12 md:mt-24">
+    <header className="pointer-events-none slide-in-from-top absolute top-0 flex justify-center w-full text-center mt-12 md:mt-24">
       <div>
         <h1>
           <div className="slide-in-from-top font-mono text-3xl sm:text-4xl md:text-6xl bg-gray-900 mt-1 md:py-4 md:pt-1" to="/">
