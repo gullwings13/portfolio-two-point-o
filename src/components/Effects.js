@@ -15,10 +15,13 @@ export default function Effects() {
   const aspect = useMemo(() => new THREE.Vector2(size.width, size.height), [size])
   useEffect(() => void composer.current.setSize(size.width, size.height), [size])
   useFrame(() => composer.current.render(), 2)
+
+
+
   return (
     <effectComposer ref={composer} args={[gl]}>
       <renderPass attachArray="passes" scene={scene} camera={camera} />
-      <unrealBloomPass attachArray="passes" args={[aspect, 2, 1, 0.997]} />
+      <unrealBloomPass attachArray="passes" args={[aspect, 2, 1, 0.995]} />
       <shaderPass
         attachArray="passes"
         args={[FXAAShader]}
