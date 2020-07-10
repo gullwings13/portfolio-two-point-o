@@ -5,29 +5,9 @@ import Effects from './Effects'
 
 export default function AnimatedHero(){
 
-    // if (window.DeviceOrientationEvent) {
-    //     window.addEventListener("deviceorientation", function (event) {
-    //         onMove([event.beta, event.gamma, event.alpha]);
-    //     }, true);
-    // } else if (window.DeviceMotionEvent) {
-    //     window.addEventListener('devicemotion', function (event) {
-    //         onMove([event.acceleration.x * 2, event.acceleration.y * 2, 0]);
-    //     }, true);
-    // } else {
-    //     window.addEventListener("MozOrientation", function (event) {
-    //         onMove([event.orientation.x * 50, event.orientation.y * 50, 0]);
-    //     }, true);
-    // }
-
     const tempObject = new THREE.Object3D()
     const tempColor = new THREE.Color()
     
-    const onMove = (ar) =>
-    {
-        rotateX = (ar[0] + ar[1])/30
-        rotateY = (ar[2] + ar[1])/30
-    }
-
     let rotateX = 0
     let rotateY = 0
 
@@ -69,7 +49,7 @@ export default function AnimatedHero(){
         useFrame(state => {
             const time = state.clock.getElapsedTime()
             ref.current.rotation.x = rotateY*0.1
-            ref.current.rotation.y = rotateX*0.1+Math.sin(time/20)/5
+            ref.current.rotation.y = rotateX*0.1
             ref.current.position.x = Math.sin(time/10)
             ref.current.position.y = Math.sin(time/13)
             ref.current.position.z = Math.sin(time/20)
