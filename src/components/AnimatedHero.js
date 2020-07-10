@@ -5,19 +5,19 @@ import Effects from './Effects'
 
 export default function AnimatedHero(){
 
-    if (window.DeviceOrientationEvent) {
-        window.addEventListener("deviceorientation", function (event) {
-            onMove([event.beta, event.gamma, event.alpha]);
-        }, true);
-    } else if (window.DeviceMotionEvent) {
-        window.addEventListener('devicemotion', function (event) {
-            onMove([event.acceleration.x * 2, event.acceleration.y * 2, 0]);
-        }, true);
-    } else {
-        window.addEventListener("MozOrientation", function (event) {
-            onMove([event.orientation.x * 50, event.orientation.y * 50, 0]);
-        }, true);
-    }
+    // if (window.DeviceOrientationEvent) {
+    //     window.addEventListener("deviceorientation", function (event) {
+    //         onMove([event.beta, event.gamma, event.alpha]);
+    //     }, true);
+    // } else if (window.DeviceMotionEvent) {
+    //     window.addEventListener('devicemotion', function (event) {
+    //         onMove([event.acceleration.x * 2, event.acceleration.y * 2, 0]);
+    //     }, true);
+    // } else {
+    //     window.addEventListener("MozOrientation", function (event) {
+    //         onMove([event.orientation.x * 50, event.orientation.y * 50, 0]);
+    //     }, true);
+    // }
 
     const tempObject = new THREE.Object3D()
     const tempColor = new THREE.Color()
