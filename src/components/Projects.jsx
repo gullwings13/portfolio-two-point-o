@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 import ProjectCard from './ProjectCard'
 
 import { projects } from './projectlist'
-import { Link } from 'gatsby'
+// import { Link } from 'gatsby'
 
 const getFilters = (projects) =>
 {
