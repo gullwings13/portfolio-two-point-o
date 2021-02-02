@@ -1,10 +1,28 @@
 export const projects = [
     {
+        title: "Run Alob Run",
+        image: "alob.png",
+        description: "Platform puzzler built as part of Wizards of Joy game hackubator. Will release on IOS and Android. Built UI Menu system, the platform moving logic",
+        tags: ["unity", "UI", "interfaces", "game"],
+        filters: ["unity/c#"],
+        github: null,
+        livesite: "https://house-ranger.itch.io/run-alob-run"
+    },
+    {
+        title: "The Driving App",
+        image: "drivingapp.png",
+        description: "Contributed to Frontend and Backend of existing code base. Implemented new UI features per UX wireframes, including color scheme switching and progress bars",
+        tags: ["unity", "UI", "fullstack"],
+        filters: ["unity/c#", "fullstack"],
+        github: null,
+        livesite: "https://play.google.com/store/apps/details?id=com.ehsani.drivingapp&hl=en_US&gl=US"
+    },
+    {
         title: "Fetch",
         image: "fetch.png",
         description: "Internal company directory with realtime chat. May 2020 GA / DataDog Hackathon winning team 🏆",
         tags: ["react", "javascript", "tailwindcss", "rubyonrails"],
-        filters: ["frontend", "fullstack"],
+        filters: ["fullstack"],
         github: "https://github.com/ehighberg/fetch",
         livesite: "https://fetch-hs.netlify.app/"
     },
@@ -13,7 +31,7 @@ export const projects = [
         image: "broodbattle.png",
         description: "Realtime multiplayer, multiroom quiz game using socket.io. Tested with artillery.io",
         tags: ["react", "javascript", "tailwindcss", "expressjs", "socket.io"],
-        filters: ["frontend", "fullstack"],
+        filters: ["fullstack"],
         github: null,
         livesite: "https://brood-battle.netlify.app/"
     },
@@ -29,7 +47,7 @@ export const projects = [
     {
         title: "Orbital Simulation",
         image: "orbital.png",
-        description: "Orbital simulation toy using Unity DOTS/ECS and Unity cloud build. Supports thousands of orbiting bodies",
+        description: "Orbital simulation toy using Unity DOTS/ECS and Unity cloud build. Supports hundreds of thousands of orbiting bodies",
         tags: ["unity", "ECS/DOTS", "toy"],
         filters: ["unity/c#"],
         github: "https://github.com/gullwings13/legendary-octo-guacamole",
@@ -40,7 +58,7 @@ export const projects = [
         image: "yaywalker.png",
         description: "User submitted walking tours. Ruby on Rails backend with React frontend",
         tags: ["react", "javascript", "tailwindcss", "rubyonrails"],
-        filters: ["frontend", "fullstack"],
+        filters: ["fullstack"],
         github: "https://github.com/gullwings13/yay-walker",
         livesite: "https://aqueous-fortress-10362.herokuapp.com/"
     },
@@ -94,7 +112,7 @@ export const projects = [
         image: "njtransit.png",
         description: "UX and SEI Collaboration, taking UX Wireframes and building a functional prototype with full CRUD as a team.",
         tags: ["react", "javascript", "express", "postgreql"],
-        filters: ["frontend", "fullstack"],
+        filters: ["fullstack"],
         github: "",
         livesite: "https://nj-transit-mobile.herokuapp.com/"
     },
@@ -128,7 +146,7 @@ export const projects = [
     {
         title: "Portfolio",
         image: "portfolio.png",
-        description: "Performant Gatsby.js static site featuring video landing and dynamic project filtering. You are here right now!",
+        description: "Performant Gatsby.js static site featuring video/three.js landing and dynamic project filtering. You are here right now!",
         tags: ["gatsby", "javascript", "tailwindcss", "graphql"],
         filters: ["frontend"],
         github: "https://github.com/gullwings13/portfolio-two-point-o",

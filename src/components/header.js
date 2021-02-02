@@ -13,7 +13,7 @@ const Header = () => (
       {/* <video autoPlay muted loop playsInline className="demoReelVideo">
         <source src={video} type="video/mp4" />
       </video> */}
-      <AnimatedHero/>
+      <AnimatedHero />
       {/* <Tilt className=" absolute right-0 top-0 md:bottom-0 md:top-auto">
         <a href="https://vimeo.com/369092145" className="link-pink">
           <span className="sr-only">Demo Reel</span>
@@ -24,18 +24,18 @@ const Header = () => (
     </div> */}
     <header className="pointer-events-none slide-in-from-top absolute top-0 flex justify-center w-full text-center mt-12 md:mt-24">
       <div>
-          <h1 className="slide-in-from-top">
-            <div>
-              <span className="slide-in-from-top font-mono text-3xl sm:text-4xl md:text-6xl bg-gray-900 p-1 mt-1 md:py-4 md:pt-1" to="/">
-                tReVoR 
+        <h1 className="slide-in-from-top">
+          <div>
+            <span className="slide-in-from-top font-mono text-3xl sm:text-4xl md:text-6xl bg-white text-gray-900 p-1 mt-1 md:p-4 md:pt-1" to="/">
+              tReVoR
               </span>
-            </div>
-            <div>
-              <span className="slide-in-from-top font-mono text-3xl sm:text-4xl md:text-6xl bg-gray-900 pt-1 mt-1 md:py-4 md:pt-1" to="/">
+          </div>
+          <div>
+            <span className="slide-in-from-top font-mono text-3xl sm:text-4xl md:text-6xl bg-white text-black pt-1 mt-1 md:p-4 md:pt-1" to="/">
               sMith-&#x2060;holbouRN
               </span>
-            </div>
-          </h1>
+          </div>
+        </h1>
         <h2 className="slide-in-from-top mt-2">
           <span className="font-serif font-thin text-xl sm:text-2xl md:text-4xl mt-1 md:p-4 md:pt-1 bg-gray-900">Software Engineer & Gameplay Programmer</span>
         </h2>

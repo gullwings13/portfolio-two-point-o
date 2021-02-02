@@ -1,4 +1,4 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Roboto+Slab:wght@100;400;800&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Roboto+Slab:wght@100;400;800&display=swap');
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 
@@ -597,36 +597,36 @@ video {
   height: auto;
 }
 
-.container {
+.container{
   width: 100%;
 }
 
-@media (min-width: 460px) {
-  .container {
+@media (min-width: 460px){
+  .container{
     max-width: 460px;
   }
 }
 
-@media (min-width: 640px) {
-  .container {
+@media (min-width: 640px){
+  .container{
     max-width: 640px;
   }
 }
 
-@media (min-width: 768px) {
-  .container {
+@media (min-width: 768px){
+  .container{
     max-width: 768px;
   }
 }
 
-@media (min-width: 1024px) {
-  .container {
+@media (min-width: 1024px){
+  .container{
     max-width: 1024px;
   }
 }
 
-@media (min-width: 1280px) {
-  .container {
+@media (min-width: 1280px){
+  .container{
     max-width: 1280px;
   }
 }
@@ -797,7 +797,7 @@ body {
   background-color: #1a202c;
 }
 
-.sr-only {
+.sr-only{
   position: absolute;
   width: 1px;
   height: 1px;
@@ -809,467 +809,475 @@ body {
   border-width: 0;
 }
 
-.appearance-none {
+.appearance-none{
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
 }
 
-.bg-white {
+.bg-white{
   background-color: #fff;
 }
 
-.bg-gray-900 {
+.bg-gray-900{
   background-color: #1a202c;
 }
 
-.bg-pink-400 {
+.bg-pink-400{
   background-color: #f687b3;
 }
 
-.border-gray-300 {
+.border-gray-300{
   border-color: #e2e8f0;
 }
 
-.border-gray-800 {
+.border-gray-800{
   border-color: #2d3748;
 }
 
-.hover\:border-pink-600:hover {
+.hover\:border-pink-600:hover{
   border-color: #d53f8c;
 }
 
-.rounded-sm {
+.rounded-sm{
   border-radius: 0.125rem;
 }
 
-.rounded-lg {
+.rounded-lg{
   border-radius: 0.5rem;
 }
 
-.border {
+.border{
   border-width: 1px;
 }
 
-.block {
+.block{
   display: block;
 }
 
-.flex {
+.flex{
   display: flex;
 }
 
-.hidden {
+.hidden{
   display: none;
 }
 
-.flex-col {
+.flex-col{
   flex-direction: column;
 }
 
-.flex-wrap {
+.flex-wrap{
   flex-wrap: wrap;
 }
 
-.items-center {
+.items-center{
   align-items: center;
 }
 
-.justify-end {
+.justify-end{
   justify-content: flex-end;
 }
 
-.justify-center {
+.justify-center{
   justify-content: center;
 }
 
-.justify-between {
+.justify-between{
   justify-content: space-between;
 }
 
-.content-end {
+.content-end{
   align-content: flex-end;
 }
 
-.font-serif {
+.font-serif{
   font-family: Roboto Slab, Georgia, Cambria, "Times New Roman", Times, serif;
 }
 
-.font-mono {
+.font-mono{
   font-family: Major Mono Display, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
-.font-thin {
+.font-thin{
   font-weight: 200;
 }
 
-.font-light {
+.font-light{
   font-weight: 300;
 }
 
-.font-bold {
+.font-bold{
   font-weight: 700;
 }
 
-.h-5 {
+.h-5{
   height: 1.25rem;
 }
 
-.h-20 {
+.h-20{
   height: 5rem;
 }
 
-.h-32 {
+.h-32{
   height: 8rem;
 }
 
-.leading-normal {
+.leading-normal{
   line-height: 1.5;
 }
 
-.mx-1 {
+.mx-1{
   margin-left: 0.25rem;
   margin-right: 0.25rem;
 }
 
-.my-2 {
+.my-2{
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
 }
 
-.mx-3 {
+.mx-3{
   margin-left: 0.75rem;
   margin-right: 0.75rem;
 }
 
-.my-4 {
+.my-4{
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
 
-.my-6 {
+.my-6{
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
 }
 
-.my-10 {
+.my-10{
   margin-top: 2.5rem;
   margin-bottom: 2.5rem;
 }
 
-.mt-1 {
+.mt-1{
   margin-top: 0.25rem;
 }
 
-.mt-2 {
+.mt-2{
   margin-top: 0.5rem;
 }
 
-.mb-2 {
+.mb-2{
   margin-bottom: 0.5rem;
 }
 
-.mt-4 {
+.mt-4{
   margin-top: 1rem;
 }
 
-.mt-12 {
+.mt-12{
   margin-top: 3rem;
 }
 
-.mb-20 {
+.mb-20{
   margin-bottom: 5rem;
 }
 
-.min-w-full {
+.min-w-full{
   min-width: 100%;
 }
 
-.object-cover {
+.object-cover{
   -o-object-fit: cover;
      object-fit: cover;
 }
 
-.object-top {
+.object-top{
   -o-object-position: top;
      object-position: top;
 }
 
-.hover\:opacity-75:hover {
+.hover\:opacity-75:hover{
   opacity: 0.75;
 }
 
-.focus\:outline-none:focus {
+.focus\:outline-none:focus{
   outline: 0;
 }
 
-.p-1 {
+.p-1{
   padding: 0.25rem;
 }
 
-.p-3 {
+.p-2{
+  padding: 0.5rem;
+}
+
+.p-3{
   padding: 0.75rem;
 }
 
-.p-4 {
+.p-4{
   padding: 1rem;
 }
 
-.py-1 {
+.py-1{
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
 }
 
-.px-1 {
+.px-1{
   padding-left: 0.25rem;
   padding-right: 0.25rem;
 }
 
-.py-2 {
+.py-2{
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
 }
 
-.px-2 {
+.px-2{
   padding-left: 0.5rem;
   padding-right: 0.5rem;
 }
 
-.px-4 {
+.px-4{
   padding-left: 1rem;
   padding-right: 1rem;
 }
 
-.pt-1 {
+.pt-1{
   padding-top: 0.25rem;
 }
 
-.pointer-events-none {
+.pointer-events-none{
   pointer-events: none;
 }
 
-.static {
+.static{
   position: static;
 }
 
-.fixed {
+.fixed{
   position: fixed;
 }
 
-.absolute {
+.absolute{
   position: absolute;
 }
 
-.top-0 {
+.top-0{
   top: 0;
 }
 
-.right-0 {
+.right-0{
   right: 0;
 }
 
-.bottom-0 {
+.bottom-0{
   bottom: 0;
 }
 
-.focus\:shadow-outline:focus {
+.focus\:shadow-outline:focus{
   box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5);
 }
 
-.text-left {
+.text-left{
   text-align: left;
 }
 
-.text-center {
+.text-center{
   text-align: center;
 }
 
-.text-right {
+.text-right{
   text-align: right;
 }
 
-.text-justify {
+.text-justify{
   text-align: justify;
 }
 
-.text-black {
+.text-black{
   color: #000;
 }
 
-.text-white {
+.text-white{
   color: #fff;
 }
 
-.text-xs {
+.text-gray-900{
+  color: #1a202c;
+}
+
+.text-xs{
   font-size: 0.75rem;
 }
 
-.text-sm {
+.text-sm{
   font-size: 0.875rem;
 }
 
-.text-lg {
+.text-lg{
   font-size: 1.125rem;
 }
 
-.text-xl {
+.text-xl{
   font-size: 1.25rem;
 }
 
-.text-3xl {
+.text-3xl{
   font-size: 1.875rem;
 }
 
-.text-4xl {
+.text-4xl{
   font-size: 2.25rem;
 }
 
-.w-1\/3 {
+.w-1\/3{
   width: 33.333333%;
 }
 
-.w-3\/4 {
+.w-3\/4{
   width: 75%;
 }
 
-.w-8\/12 {
+.w-8\/12{
   width: 66.666667%;
 }
 
-.w-full {
+.w-full{
   width: 100%;
 }
 
-.z-10 {
+.z-10{
   z-index: 10;
 }
 
-@media (min-width: 640px) {
+@media (min-width: 640px){
 
-  .sm\:mx-5 {
+  .sm\:mx-5{
     margin-left: 1.25rem;
     margin-right: 1.25rem;
   }
 
-  .sm\:text-left {
+  .sm\:text-left{
     text-align: left;
   }
 
-  .sm\:text-center {
+  .sm\:text-center{
     text-align: center;
   }
 
-  .sm\:text-right {
+  .sm\:text-right{
     text-align: right;
   }
 
-  .sm\:text-xl {
+  .sm\:text-xl{
     font-size: 1.25rem;
   }
 
-  .sm\:text-2xl {
+  .sm\:text-2xl{
     font-size: 1.5rem;
   }
 
-  .sm\:text-4xl {
+  .sm\:text-4xl{
     font-size: 2.25rem;
   }
 
-  .sm\:w-1\/3 {
+  .sm\:w-1\/3{
     width: 33.333333%;
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 768px){
 
-  .md\:flex {
+  .md\:flex{
     display: flex;
   }
 
-  .md\:mb-0 {
+  .md\:mb-0{
     margin-bottom: 0;
   }
 
-  .md\:mt-24 {
+  .md\:mt-24{
     margin-top: 6rem;
   }
 
-  .md\:p-4 {
+  .md\:p-4{
     padding: 1rem;
   }
 
-  .md\:py-4 {
+  .md\:py-4{
     padding-top: 1rem;
     padding-bottom: 1rem;
   }
 
-  .md\:pt-1 {
+  .md\:pt-1{
     padding-top: 0.25rem;
   }
 
-  .md\:top-0 {
+  .md\:top-0{
     top: 0;
   }
 
-  .md\:bottom-0 {
+  .md\:bottom-0{
     bottom: 0;
   }
 
-  .md\:top-auto {
+  .md\:top-auto{
     top: auto;
   }
 
-  .md\:bottom-auto {
+  .md\:bottom-auto{
     bottom: auto;
   }
 
-  .md\:text-lg {
+  .md\:text-lg{
     font-size: 1.125rem;
   }
 
-  .md\:text-2xl {
+  .md\:text-2xl{
     font-size: 1.5rem;
   }
 
-  .md\:text-3xl {
+  .md\:text-3xl{
     font-size: 1.875rem;
   }
 
-  .md\:text-4xl {
+  .md\:text-4xl{
     font-size: 2.25rem;
   }
 
-  .md\:text-6xl {
+  .md\:text-6xl{
     font-size: 4rem;
   }
 
-  .md\:w-1\/2 {
+  .md\:w-1\/2{
     width: 50%;
   }
 
-  .md\:w-2\/3 {
+  .md\:w-2\/3{
     width: 66.666667%;
   }
 
-  .md\:w-2\/12 {
+  .md\:w-2\/12{
     width: 16.666667%;
   }
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 1280px){
 
-  .xl\:w-80 {
+  .xl\:w-80{
     width: 20rem;
   }
 }
 
-@media (min-width: 460px) {
+@media (min-width: 460px){
 
-  .xs\:w-72 {
+  .xs\:w-72{
     width: 18rem;
   }
 
-  .xs\:w-3\/4 {
+  .xs\:w-3\/4{
     width: 75%;
   }
 }
