@@ -11,11 +11,29 @@ export const projects = [
     {
         title: "The Driving App",
         image: "drivingapp.png",
-        description: "Contributed to Frontend and Backend of existing code base. Implemented new UI features per UX wireframes, including color scheme switching and progress bars",
+        description: "Contributed to Frontend and Backend of existing code base. Implemented detailed new UI features per UX wireframes, including color scheme switching and progress bars",
         tags: ["unity", "UI", "fullstack"],
         filters: ["unity/c#", "fullstack"],
         github: null,
         livesite: "https://play.google.com/store/apps/details?id=com.ehsani.drivingapp&hl=en_US&gl=US"
+    },
+    {
+        title: "The X-Effect",
+        image: "xeffect.png",
+        description: "Motivational and produtivity habit building system. Backend built using Node, Express and MongoDB.",
+        tags: ["react", "mongodb", "tailwindcss", "express"],
+        filters: ["fullstack"],
+        github: "https://github.com/Khimarra/the-x-effect",
+        livesite: "https://thexeffect.netlify.app/"
+    },
+    {
+        title: "ParkSafe",
+        image: "parksafe.png",
+        description: "NYC Park Saftey rating concept site. Lazy loading for images, custom API and backend ratings calulations ",
+        tags: ["react", "tailwindcss", "rubyonrails"],
+        filters: ["fullstack"],
+        github: "https://github.com/gullwings13/covidparkappbackend",
+        livesite: "https://parksafe.netlify.app/"
     },
     {
         title: "Fetch",
