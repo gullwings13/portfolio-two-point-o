@@ -13,7 +13,7 @@ const IndexPage = () => (
         <span className="font-mono text-xl sm:text-2xl md:text-3xl bg-white text-black p-1">About Me</span>
       </div>
       <p className="mt-4 text-justify ">
-        <span className="font-bold">Hi!</span> I’m an empathic and imaginative software engineer with over 20 years working in technology. Having previously designed and implemented reliable, fast and secure Cisco networks, I am now building full stack web applications and neat games in JS/React/Node/Ruby on Rails/Firebase and C#/Unity. Grab my resume or get in at the bottom of this page, I'd love to help you build your next cool thing.
+        <span className="font-bold">Hi!</span> I’m an empathic and imaginative software engineer with over 20 years working in technology. Having previously designed and implemented reliable, fast and secure Cisco networks, I am now building full stack web applications and neat games in JS/React/Node/Ruby on Rails/Firebase and C#/Unity. Grab my resume or get in touch at the bottom of this page, I'd love to help you build your next cool thing.
       </p>
 
     </div >
