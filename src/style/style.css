@@ -668,14 +668,14 @@ video {
   background-color: #2d3748;
   border-color: #4a5568;
   border-width: 1px;
-  transition: transform .5s;
+  transition: transform .2s;
   /* transform-style: preserve-3d; */
   transform: perspective(1000px);
 }
 
 .project-card:hover{
   /* transform-style: preserve-3d; */
-  z-index:555555 !important;
+  z-index:45 !important;
 }
 
 /* .preserve-3d{
@@ -1147,6 +1147,10 @@ body {
 
 .z-10{
   z-index: 10;
+}
+
+.z-50{
+  z-index: 50;
 }
 
 @media (min-width: 640px){
