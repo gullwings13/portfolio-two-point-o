@@ -2,7 +2,7 @@ export const projects = [
     {
         title: "Run Alob Run",
         image: "alob.png",
-        description: "Platform puzzler built as part of Wizards of Joy game hackubator. Released on IOS and Android. Built UI Menu system, the platform moving logic",
+        description: "Platform puzzler built in the https://www.indiegameacademy.games accelerator. Released on IOS and Android",
         tags: ["unity", "UI", "interfaces", "game"],
         filters: ["unity/c#"],
         github: null,
@@ -11,7 +11,7 @@ export const projects = [
     {
         title: "The Driving App",
         image: "drivingapp.png",
-        description: "Contributed to Frontend and Backend of existing code base. Implemented detailed new UI features per UX wireframes, including color scheme switching and progress bars",
+        description: "Contributed to Frontend and Backend of existing code base. Implemented new UI features from UX wire-frames, including color scheme switching and progress bars",
         tags: ["unity", "UI", "fullstack"],
         filters: ["unity/c#", "fullstack"],
         github: null,
@@ -20,7 +20,7 @@ export const projects = [
     {
         title: "The X-Effect",
         image: "xeffect.png",
-        description: "Motivational and produtivity habit building system. Backend built using Node, Express and MongoDB.",
+        description: "Motivational and productivity habit building system. Backend built using Node, Express and MongoDB",
         tags: ["react", "mongodb", "tailwindcss", "express"],
         filters: ["fullstack"],
         github: "https://github.com/Khimarra/the-x-effect",
@@ -29,7 +29,7 @@ export const projects = [
     {
         title: "ParkSafe",
         image: "parksafe.png",
-        description: "NYC Park Saftey rating concept site. Lazy loading for images, custom API and backend ratings calulations ",
+        description: "NYC Park Safety rating concept site. Lazy loading for images, custom API and backend ratings calculations",
         tags: ["react", "tailwindcss", "rubyonrails"],
         filters: ["fullstack"],
         github: "https://github.com/gullwings13/covidparkappbackend",
@@ -47,7 +47,7 @@ export const projects = [
     {
         title: "Brood Battle",
         image: "broodbattle.png",
-        description: "Realtime multiplayer, multiroom quiz game using socket.io. Tested with artillery.io",
+        description: "Realtime multiplayer, multi-room quiz game using socket.io. Tested with artillery.io",
         tags: ["react", "javascript", "tailwindcss", "expressjs", "socket.io"],
         filters: ["fullstack"],
         github: null,
@@ -56,7 +56,7 @@ export const projects = [
     {
         title: "Paprika.Studio",
         image: "paprikastudio.png",
-        description: "Custom Gatsby static markdown blog with automatic darktheme CSS",
+        description: "Custom Gatsby static markdown blog with automatic dark-theme CSS",
         tags: ["gatsby", "react", "javascript"],
         filters: ["frontend"],
         github: null,
@@ -92,7 +92,7 @@ export const projects = [
     {
         title: "Stoc Play",
         image: "stocplay.png",
-        description: "Trade virtual stock to gain confidence. Built with Javascript, HTML and CSS. Features API request caching and works in conjunction with cloudflare worker to proxy API requests.",
+        description: "Trade virtual stock to gain confidence. Built with Javascript, HTML and CSS. Features API request caching and works in conjunction with cloudflare worker to proxy API requests",
         tags: ["javascript", "css", "restfulapi"],
         filters: ["frontend"],
         github: "https://github.com/gullwings13/stoc-play",
@@ -128,16 +128,16 @@ export const projects = [
     {
         title: "NJ Transit Mobile",
         image: "njtransit.png",
-        description: "UX and SEI Collaboration, taking UX Wireframes and building a functional prototype with full CRUD as a team.",
+        description: "UX and Engineering Collaboration, transforming UX wire-frames into a functional full stack prototype as a team.",
         tags: ["react", "javascript", "express", "postgreql"],
         filters: ["fullstack"],
-        github: "",
+        github: null,
         livesite: "https://nj-transit-mobile.herokuapp.com/"
     },
     {
         title: "Witch Sword",
         image: "witchsword.png",
-        description: "Action RPG exploring VR elements and platforming gameplay",
+        description: "Action RPG exploring VR elements and platforming game-play",
         tags: ["unity", "vr", "ai", "game"],
         filters: ["unity/c#"],
         github: null,
@@ -146,7 +146,7 @@ export const projects = [
     {
         title: "Weather App",
         image: "weather.png",
-        description: "Javscript weather app using open weather API with local storage",
+        description: "Javascript weather app using open weather API with local storage",
         tags: ["javascript", "css", "restfulapi"],
         filters: ["frontend"],
         github: "https://github.com/gullwings13/weather-app",
@@ -168,6 +168,6 @@ export const projects = [
         tags: ["gatsby", "javascript", "tailwindcss", "graphql"],
         filters: ["frontend"],
         github: "https://github.com/gullwings13/portfolio-two-point-o",
-        livesite: ""
+        livesite: null
     }
 ]
