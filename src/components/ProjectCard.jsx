@@ -15,13 +15,14 @@ export default function ProjectCard(props)
 
     return (
         <Tilt
-            tiltAngleXInitial={0}
-            tiltAngleYInitial={0}
+            tiltAngleXInitial={3}
+            tiltAngleYInitial={5}
             tiltMaxAngleX={8}
             tiltMaxAngleY={8}
             perspective={1000}
-            transitionSpeed={1500}
-            scale={1.1}
+            transitionSpeed={200}
+
+            scale={1.25}
             gyroscope={true}
             className=" w-full mx-3 xs:w-72 sm:mx-5 xl:w-80  project-card hover:border-pink-600">
 

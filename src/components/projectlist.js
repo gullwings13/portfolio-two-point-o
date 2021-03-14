@@ -2,11 +2,11 @@ export const projects = [
     {
         title: "Run Alob Run",
         image: "alob.png",
-        description: "Platform puzzler built as part of Wizards of Joy game hackubator. Will release on IOS and Android. Built UI Menu system, the platform moving logic",
+        description: "Platform puzzler built as part of Wizards of Joy game hackubator. Released on IOS and Android. Built UI Menu system, the platform moving logic",
         tags: ["unity", "UI", "interfaces", "game"],
         filters: ["unity/c#"],
         github: null,
-        livesite: "https://house-ranger.itch.io/run-alob-run"
+        livesite: "https://play.google.com/store/apps/details?id=com.Rangers.RunAlobRun"
     },
     {
         title: "The Driving App",

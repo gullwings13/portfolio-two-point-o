@@ -22,22 +22,24 @@
 
 .project-card{
   @apply m-4 rounded overflow-hidden shadow-2xl bg-gray-800 border-gray-700 border;
-  transition: transform .5s;
-  transform-style: preserve-3d;
+  transition: transform .2s;
+  /* transform-style: preserve-3d; */  
   transform: perspective(1000px);
 }
 
 .project-card:hover{
-  transform-style: preserve-3d;
+  /* transform-style: preserve-3d; */
+  z-index:555555 !important;
+ 
 }
 
-.preserve-3d{
+/* .preserve-3d{
   transform-style: preserve-3d;
-}
+} */
 
-.translate-z-20px{
+/* .translate-z-20px{
   transform: translateZ(60px);
-}
+} */
 
 .link-pink{
   display: inline-block;
