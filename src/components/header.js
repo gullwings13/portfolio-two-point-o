@@ -1,8 +1,8 @@
 import { AnchorLink } from "gatsby-plugin-anchor-links"
 import React from "react"
-import Tilt from 'react-parallax-tilt'
+// import Tilt from 'react-parallax-tilt'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faVimeoSquare } from '@fortawesome/free-brands-svg-icons'
+// import { faVimeoSquare } from '@fortawesome/free-brands-svg-icons'
 import { faHome } from '@fortawesome/free-solid-svg-icons'
 import video from "../media/Webshort.mp4"
 // import AnimatedHero from "./AnimatedHero"
@@ -14,11 +14,11 @@ const Header = () => (
         <source src={video} type="video/mp4" />
       </video>
       {/* <AnimatedHero /> */}
-      <Tilt className=" absolute right-0 top-0 md:bottom-0 md:top-auto">
+      {/* <Tilt className=" absolute right-0 top-0 md:bottom-0 md:top-auto">
         <a href="https://vimeo.com/369092145" className="link-pink">
           <span className="sr-only">Demo Reel</span>
           <FontAwesomeIcon className="text-4xl" icon={faVimeoSquare} /></a>
-      </Tilt>
+      </Tilt> */}
     </div>
     {/* <div className="videoContainer">
     </div> */}

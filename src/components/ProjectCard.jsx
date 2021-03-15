@@ -22,7 +22,7 @@ export default function ProjectCard(props)
             perspective={1000}
             transitionSpeed={200}
 
-            scale={1.25}
+            scale={1.05}
             gyroscope={true}
             className=" w-full mx-3 xs:w-72 sm:mx-5 xl:w-80  project-card hover:border-pink-600">
 
