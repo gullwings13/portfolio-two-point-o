@@ -13,7 +13,7 @@ const IndexPage = () => (
         <span className="font-mono text-xl sm:text-2xl md:text-3xl bg-white text-black p-1">About Me</span>
       </div>
       <p className="mt-4 text-justify ">
-        <span className="font-bold">Hi!</span> I’m an empathic and imaginative software engineer with over 20 years working in technology. Having previously designed and implemented reliable, fast and secure Cisco networks, I am now building full stack web applications and neat games in JS/React/Node/Rails/Firebase and C#/Unity. Grab my resume or get in touch at the bottom of this page. I'd love to help you build your next cool thing.
+        <span className="font-bold">Hi!</span> I’m an empathic and imaginative Programmer with a 20-year history of solving hard technical problems. After a decade designing high-reliability Cisco networks, I now focus my engineering discipline on Game Development. I build complex systems and indie games using C#, Unity, and DOTS, with a passion for clean code and collaborative design. Whether it's squashing obscure bugs or architecting new features, I’m ready to contribute.
       </p>
 
     </div >

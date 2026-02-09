@@ -27,12 +27,12 @@ const Header = () => (
         <h1 className="slide-in-from-top">
           <div>
             <span className="slide-in-from-top font-mono text-3xl sm:text-4xl md:text-6xl bg-white text-gray-900 p-1 mt-1 md:p-4 md:pt-1" to="/">
-              tReVoR
+              tReV
               </span>
           </div>
           <div>
             <span className="slide-in-from-top font-mono text-3xl sm:text-4xl md:text-6xl bg-white text-black pt-1 mt-1 md:p-4 md:pt-1" to="/">
-              sMith-&#x2060;holbouRN
+              holbouRN
               </span>
           </div>
         </h1>

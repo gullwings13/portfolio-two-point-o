@@ -25,7 +25,7 @@ export default class Contact extends React.Component
                     action="https://formspree.io/mwkqbanl"
                     method="POST"
                 >
-                    Please contact me using the below form. I will respond as quickly as I can. Thank you!
+                    I’d love to hear from you!
                     
                     <div className="min-w-full">
                         <div className="my-4">

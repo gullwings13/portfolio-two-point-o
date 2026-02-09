@@ -46,5 +46,14 @@
     "clean": "gatsby clean",
     "css": "postcss ./src/style/tailwind.css -o ./src/style/style.css",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+  },
+  "overrides": {
+    "sharp": "0.32.6",
+    "remark-mdx": "1.6.22",
+    "undici": "5.28.4",
+    "cheerio": "1.0.0-rc.12"
+  },
+  "volta": {
+    "node": "16.20.2"
   }
 }
