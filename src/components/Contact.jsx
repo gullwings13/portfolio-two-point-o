@@ -63,7 +63,7 @@ export default class Contact extends React.Component
                     </p>
                     <p>
                         And grab my resume:</p>
-                    <p>  <a className="link-pink" target="_blank" rel="noopener noreferrer" href={'/resume.pdf'}>here <FontAwesomeIcon icon={faFilePdf} />
+                    <p>  <a className="link-pink" target="_blank" rel="noopener noreferrer" href={'/Trev_Holbourn_Resume.pdf'}>here <FontAwesomeIcon icon={faFilePdf} />
                         </a>
                     </p>
                 </div>
