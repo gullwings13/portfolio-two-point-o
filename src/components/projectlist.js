@@ -18,6 +18,15 @@ export const projects = [
     //     livesite: "https://play.google.com/store/apps/details?id=com.ehsani.drivingapp&hl=en_US&gl=US"
     // },
     {
+        title: "Gro.lol",
+        image: "grolol.png",
+        description: "Personal homepage builder at gro.lol/yourname. Sign up, add your links, pick a theme, publish in under 60 seconds.",
+        tags: ["rails", "react", "tailwindcss", "fullstack", "solo"],
+        filters: ["fullstack"],
+        github: null,
+        livesite: "https://gro.lol/"
+    },
+    {
         title: "Sobreviventes do Castelo (SDC)",
         image: "sdc.png",
         description: "Unity 2D horde survivor featuring object pooling, stat driven weapons, wave-based enemy spawning, and event-driven achievements. Architected to move fast.",
