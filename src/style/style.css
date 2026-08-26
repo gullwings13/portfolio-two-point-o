@@ -807,6 +807,33 @@ video {
   display: none
 }
 
+/* The universal rule above paints everything in the page's light body colour, which is
+   correct on the dark background and unreadable the moment an element brings its own
+   light one. Form fields do exactly that, and Tailwind's preflight has them inherit
+   colour, so they land at #e2e8f0 on white -- a contrast ratio of 1.2:1. They opt back
+   into dark ink here rather than every field having to remember a class. */
+
+input,
+textarea,
+select {
+  --text-opacity: 1;
+  color: #1a202c;
+  color: rgba(26, 32, 44, var(--text-opacity));
+}
+
+/* Not a palette grey: gray-600 lands at 4.0:1 on white, which clears AA only at the 24px
+   the form uses on desktop and misses it at the 18px it uses on mobile. This passes at
+   4.75:1 while staying far enough from the typed ink (3.4:1) to still read as a hint. */
+
+input::-moz-placeholder, textarea::-moz-placeholder {
+  color: #667488;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #667488;
+}
+
 body {
   --bg-opacity: 1;
   background-color: #1a202c;
@@ -1048,6 +1075,10 @@ body {
   padding: 0.25rem;
 }
 
+.p-2{
+  padding: 0.5rem;
+}
+
 .p-3{
   padding: 0.75rem;
 }
@@ -1149,6 +1180,12 @@ body {
   --text-opacity: 1;
   color: #1a202c;
   color: rgba(26, 32, 44, var(--text-opacity));
+}
+
+.text-red-700{
+  --text-opacity: 1;
+  color: #c53030;
+  color: rgba(197, 48, 48, var(--text-opacity));
 }
 
 .w-1\/3{

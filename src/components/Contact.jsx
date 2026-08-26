@@ -48,8 +48,20 @@ export default class Contact extends React.Component
                         </div>
                     </div>
 
-                    {status === "SUCCESS" ? <p>Thanks!</p> : <button className="link-pink">submit</button>}
-                    {status === "ERROR" && <p>Ooops! There was an error.</p>}
+                    {status === "SUCCESS" ? (
+                        <p role="status" aria-live="polite" className="font-serif bg-white text-black text-center p-2 mt-2">
+                            Message sent. I&rsquo;ll come back to you.
+                        </p>
+                    ) : (
+                        <button type="submit" className="link-pink" disabled={status === "SENDING"}>
+                            {status === "SENDING" ? "sending..." : "submit"}
+                        </button>
+                    )}
+                    {status === "ERROR" && (
+                        <p role="alert" className="font-serif bg-white text-red-700 text-center p-2 mt-2">
+                            That did not send. Try again, or email me directly.
+                        </p>
+                    )}
                 </form>
                 <div className="text-right">
                     <p className="mt-4">You can also find me on:</p>
@@ -77,6 +89,7 @@ export default class Contact extends React.Component
         const form = e.target
         const data = new FormData(form)
         const xhr = new XMLHttpRequest()
+        this.setState({ status: "SENDING" })
         xhr.open(form.method, form.action)
         xhr.setRequestHeader("Accept", "application/json")
         xhr.onreadystatechange = () =>
