@@ -21,8 +21,12 @@ const uniqueFilters = getFilters(projects)
 export default class Projects extends Component
 {
 
+    // Seeded with the full list rather than filled in componentDidMount: that hook never
+    // runs during SSR, so starting empty meant the built HTML shipped zero project
+    // titles, blurbs, tags or outbound links -- nothing for a crawler that does not run
+    // JS, and no plain-text fallback if the bundle ever failed to hydrate.
     state = {
-        projects: [],
+        projects: projects,
         filter: null
     }
 
@@ -45,14 +49,6 @@ export default class Projects extends Component
     }
 
     resetArray = () =>
-    {
-        this.setState({
-            projects: projects,
-            filter: null
-        })
-    }
-
-    componentDidMount()
     {
         this.setState({
             projects: projects,
