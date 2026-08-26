@@ -52,12 +52,17 @@ const Image = ({ src, objectPosition, alt, className, ...props }) =>
     )
   }
 
+  // eager, not lazy: gatsby-image omits <picture> from its SSR output while it waits
+  // for an intersection, which left the server and client markup mismatched now that
+  // the grid renders on the server. Eager also puts the real srcsets in the HTML. The
+  // whole set is 300px-wide WebP, so the up-front cost is negligible.
   return (
     <Img
       objectPosition={objectPosition}
       fluid={fluid}
       alt={alt}
       className={className}
+      loading="eager"
       Tag='div'
       {...props}
     />
