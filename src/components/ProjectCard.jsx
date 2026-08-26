@@ -1,17 +1,11 @@
 import React from 'react'
 import Tilt from 'react-parallax-tilt'
 import ProjectImage from './projectImage'
-import SurrealDiamondDeck from './SurrealDiamondDeck'
-
-// Projects that render a live component instead of a still image.
-const ANIMATIONS = {
-    'surreal-diamond': SurrealDiamondDeck,
-}
+import ProjectMedia from './ProjectMedia'
 
 export default function ProjectCard(props)
 {
-    const { title, image, description, tags, github, livesite, animation } = props.project
-    const Animation = animation ? ANIMATIONS[animation] : null
+    const { title, image, media, description, tags, github, livesite } = props.project
     const hashtags = (tags) =>
     (
         tags.map((tag, index) => (
@@ -36,8 +30,12 @@ export default function ProjectCard(props)
                 <a href={livesite}
                     target="_blank"
                     rel="noopener noreferrer"
-                >{Animation ? (
-                    <Animation className="w-full h-32 rounded-sm border-gray-800 border hover:opacity-75 hover:border-pink-600" />
+                >{media ? (
+                    <ProjectMedia
+                        className="object-top w-full h-32 rounded-sm object-cover border-gray-800 border hover:opacity-75 hover:border-pink-600"
+                        src={media.src}
+                        still={media.still}
+                        alt={title} />
                 ) : (
                     <ProjectImage
                         className="object-top w-full h-32 rounded-sm object-cover border-gray-800 border hover:opacity-75 hover:border-pink-600"

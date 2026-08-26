@@ -19,8 +19,9 @@ export const projects = [
     // },
     {
         title: "Surreal Diamond",
-        image: "fantasy2.png",
-        animation: "surreal-diamond",
+        // Captured from the running game (the Collection gallery, one card per rarity
+        // tier). Animated, so it bypasses gatsby-plugin-sharp -- see ProjectMedia.
+        media: { src: "/fantasy2.webp", still: "/fantasy2-still.webp" },
         description: "Surreal baseball run on real MLB and WNBA box scores. Field a lineup before the day's games, then a nightly cron scores what those athletes actually did into a narrated, inning-by-inning game.",
         tags: ["node", "vite", "hono", "fullstack", "game", "solo"],
         filters: ["fullstack"],
