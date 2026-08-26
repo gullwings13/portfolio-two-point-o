@@ -8,10 +8,15 @@ import React, { useEffect, useRef } from 'react'
  * CV at once (enterprise networking into full-stack) and stays calm enough behind the
  * wordmark to keep it legible. Plain 2D canvas, no render library.
  *
- * Depth is faked the cheap way. Every node gets a z, and a focal-length divide turns it
- * into a scale factor driving size, brightness, link reach and parallax. Near nodes are
- * bigger, brighter and swing further as the pointer moves, which reads as 3D without
- * anything actually being 3D.
+ * The field is a real, if shallow, volume. Every node has a z, and each frame the whole
+ * slab is rotated about its centre -- yaw then pitch -- before a focal-length divide turns
+ * depth into a scale factor driving size, brightness and link reach. Nodes on the near side
+ * of the turn swell and brighten while the far side recedes, and the two sides swap draw
+ * order as they cross. A flat parallax pan cannot fake that crossing.
+ *
+ * The rotation comes from two places: a slow sine drift so the field is alive on an
+ * untouched page, and the pointer, which adds yaw and pitch on top. Both stay small on
+ * purpose -- the wordmark sits over this and has to stay legible.
  *
  * Pauses when the tab is hidden, and draws a single static frame with no pointer
  * response when the viewer has asked for reduced motion.
@@ -19,7 +24,7 @@ import React, { useEffect, useRef } from 'react'
 
 const NODE_DENSITY = 30000     // one node per this many square px of world
 const NODE_MIN = 40
-const NODE_MAX = 130
+const NODE_MAX = 160
 const LINK_DISTANCE = 175      // px at the near plane, scaled by depth
 const PACKET_COUNT = 9
 const PACKET_SPEED = 0.0065    // fraction of an edge per frame at 60fps
@@ -27,10 +32,33 @@ const PACKET_SPEED = 0.0065    // fraction of an edge per frame at 60fps
 const FOCAL = 520              // with DEPTH below, scale runs 1.0 (near) to 0.67 (far)
 const DEPTH = 260
 const MIN_SCALE = 520 / (520 + 260)
-const PARALLAX = 0.075         // how far the field swings with the pointer
+
+// Rotation. Pointer and drift are additive, so the sums are what the eye actually sees:
+// about 10 degrees of yaw and 6 of pitch at full deflection. Past that the field starts
+// competing with the wordmark instead of sitting behind it.
+const MAX_YAW = 0.11           // rad, pointer-driven
+const MAX_PITCH = 0.065
+const DRIFT_YAW = 0.07         // rad, the idle sway
+const DRIFT_PITCH = 0.04
+const DRIFT_SPEED = 0.0009     // phase per frame -- one full sway takes about two minutes
+const DRIFT_PITCH_RATIO = 0.61 // incommensurate with the yaw phase, so it never visibly loops
+const ROT_EASE = 0.05          // rotation smoothing
+
+// The turn is bounded by how far it swings the field edge in DEPTH, not by its angle. The
+// slab is as wide as the viewport, so a fixed angle on a 3440px hero throws its edges much
+// further back than the same angle on a phone -- past the far plane, where they contract
+// inside the viewport and leave a bare band down the sides. Capping the swing in px keeps
+// the effect looking the same at every width; wide screens simply turn through fewer
+// degrees to get there.
+const ROTATION_SWING = 180     // px of depth at the field edge, at full deflection
+
+// Depth scaling contracts the field toward the centre and rotation contracts the receding
+// side further, so it is built well wider than the viewport. Tuned as the smallest value
+// that leaves no bare edge at full deflection from 375px to 3440px wide.
+const ROTATION_OVERSCAN = 1.22
+
 const CURSOR_RADIUS = 185      // px, screen space
 const CURSOR_PUSH = 20         // px a node is nudged out of the pointer's way
-const EASE = 0.075             // pointer smoothing
 
 const INK = '#111827'
 const PACKET_HEAD = '#f687b3'
@@ -46,6 +74,19 @@ const makeRandom = seed => () =>
     return ((t ^ (t >>> 14)) >>> 0) / 4294967296
 }
 
+// Overscan. Depth scaling contracts everything toward the centre, so a field built to
+// exactly the viewport leaves the edges bare once the far nodes shrink inward. Build across
+// the area the FAR plane covers (plus room for the turn) and let perspective pull it in.
+// Shared so the node placement and the wander bounds cannot drift apart.
+const worldBounds = (width, height) =>
+{
+    const worldW = (width / MIN_SCALE) * ROTATION_OVERSCAN
+    const worldH = (height / MIN_SCALE) * ROTATION_OVERSCAN
+    const insetX = (worldW - width) / 2
+    const insetY = (worldH - height) / 2
+    return { worldW, worldH, minX: -insetX, maxX: width + insetX, minY: -insetY, maxY: height + insetY }
+}
+
 // Jittered grid rather than pure random placement. Uniform random clumps badly at this
 // node count -- the first pass left the left third dense and the right third empty --
 // and a background field wants even coverage more than it wants true randomness.
@@ -53,13 +94,7 @@ const buildNodes = (width, height) =>
 {
     const random = makeRandom(20260826)
 
-    // Overscan. Depth scaling contracts everything toward the centre, so a field built
-    // to exactly the viewport leaves the edges bare once the far nodes shrink inward.
-    // Build across the area the FAR plane covers, then let perspective pull it in.
-    const worldW = width / MIN_SCALE
-    const worldH = height / MIN_SCALE
-    const originX = -(worldW - width) / 2
-    const originY = -(worldH - height) / 2
+    const { worldW, worldH, minX: originX, minY: originY } = worldBounds(width, height)
 
     const target = Math.round((worldW * worldH) / NODE_DENSITY)
     const count = Math.max(NODE_MIN, Math.min(NODE_MAX, target))
@@ -84,12 +119,10 @@ const buildNodes = (width, height) =>
                 sx: 0,
                 sy: 0,
                 s: 1,
+                d: 0,
             })
         }
     }
-    // Painter's algorithm: draw the far ones first. z never changes, so sorting once
-    // here saves sorting every frame.
-    nodes.sort((a, b) => b.z - a.z)
     return nodes
 }
 
@@ -118,11 +151,25 @@ const HeroCanvas = ({ className }) =>
         let packets = []
         let frame = null
 
-        // Where the pointer is, and where the field has eased to so far.
-        let targetX = 0
-        let targetY = 0
-        let camX = 0
-        let camY = 0
+        // Where the pointer wants the field turned, and where it has eased to so far.
+        let targetYaw = 0
+        let targetPitch = 0
+        let yaw = 0
+        let pitch = 0
+        let cosYaw = 1
+        let sinYaw = 0
+        let cosPitch = 1
+        let sinPitch = 0
+        let phase = 0
+        // Set on resize: the angles above, scaled down if this viewport is wide enough
+        // that they would overswing it. See ROTATION_SWING.
+        let maxYaw = MAX_YAW
+        let maxPitch = MAX_PITCH
+        let driftYaw = DRIFT_YAW
+        let driftPitch = DRIFT_PITCH
+        // Draw order, held as indices: the packets address nodes by index, so the node
+        // array itself must not be reordered.
+        let order = []
         let pointerX = -9999
         let pointerY = -9999
         let pointerActive = false
@@ -161,25 +208,46 @@ const HeroCanvas = ({ className }) =>
             canvas.width = Math.floor(width * dpr)
             canvas.height = Math.floor(height * dpr)
             ctx.setTransform(dpr, 0, 0, dpr, 0, 0)
-            worldMinX = -(width / MIN_SCALE - width) / 2
-            worldMaxX = width - worldMinX
-            worldMinY = -(height / MIN_SCALE - height) / 2
-            worldMaxY = height - worldMinY
+            const bounds = worldBounds(width, height)
+            worldMinX = bounds.minX
+            worldMaxX = bounds.maxX
+            worldMinY = bounds.minY
+            worldMaxY = bounds.maxY
             nodes = buildNodes(width, height)
+            order = nodes.map((unused, i) => i)
+
+            const yawScale = Math.min(1, ROTATION_SWING /
+                Math.max((bounds.worldW / 2) * Math.sin(MAX_YAW + DRIFT_YAW), 0.001))
+            const pitchScale = Math.min(1, ROTATION_SWING /
+                Math.max((bounds.worldH / 2) * Math.sin(MAX_PITCH + DRIFT_PITCH), 0.001))
+            maxYaw = MAX_YAW * yawScale
+            driftYaw = DRIFT_YAW * yawScale
+            maxPitch = MAX_PITCH * pitchScale
+            driftPitch = DRIFT_PITCH * pitchScale
             // Rebuild the packets too: the node array they index into was just replaced,
             // so keeping the old ones would leave them pointing at the wrong nodes.
             packets = Array.from({ length: PACKET_COUNT }, (unused, i) => spawnPacket(i * 6 + 1))
         }
 
-        // World position to screen position, with depth scaling and pointer parallax.
-        // Near nodes (s near 1) swing further than far ones, which is the whole trick.
+        // World position to screen position: turn the node about the centre of the field,
+        // then divide by depth. z is stored 0..1 and re-centred here, so at zero rotation
+        // this is exactly the plain focal divide it replaced.
         const project = node =>
         {
-            const s = FOCAL / (FOCAL + node.z * DEPTH)
             const cx = width / 2
             const cy = height / 2
-            let sx = cx + (node.x - cx) * s + camX * s
-            let sy = cy + (node.y - cy) * s + camY * s
+            const px = node.x - cx
+            const py = node.y - cy
+            const pz = (node.z - 0.5) * DEPTH
+
+            const xYaw = px * cosYaw + pz * sinYaw
+            const zYaw = pz * cosYaw - px * sinYaw
+            const yPitch = py * cosPitch - zYaw * sinPitch
+            const zPitch = zYaw * cosPitch + py * sinPitch
+
+            const s = FOCAL / (FOCAL + zPitch + DEPTH * 0.5)
+            let sx = cx + xYaw * s
+            let sy = cy + yPitch * s
 
             if (pointerActive) {
                 const dx = sx - pointerX
@@ -195,12 +263,18 @@ const HeroCanvas = ({ className }) =>
             node.sx = sx
             node.sy = sy
             node.s = s
+            node.d = zPitch
         }
 
         const step = () =>
         {
-            camX += (targetX - camX) * EASE
-            camY += (targetY - camY) * EASE
+            if (!reduceMotion) phase += DRIFT_SPEED
+            yaw += (targetYaw + Math.sin(phase) * driftYaw - yaw) * ROT_EASE
+            pitch += (targetPitch + Math.sin(phase * DRIFT_PITCH_RATIO) * driftPitch - pitch) * ROT_EASE
+            cosYaw = Math.cos(yaw)
+            sinYaw = Math.sin(yaw)
+            cosPitch = Math.cos(pitch)
+            sinPitch = Math.sin(pitch)
 
             ctx.fillStyle = INK
             ctx.fillRect(0, 0, width, height)
@@ -240,10 +314,15 @@ const HeroCanvas = ({ className }) =>
                 }
             }
 
-            // Nodes, far to near (the array is depth-sorted at build time).
-            for (let i = 0; i < nodes.length; i += 1) {
-                const n = nodes[i]
-                let alpha = 0.18 + 0.55 * n.s
+            // Nodes, far to near. Rotation reshuffles depth every frame, so this is sorted
+            // here rather than once at build time -- the swap as two nodes cross is a good
+            // part of what sells the turn. Nearly-sorted input, so it stays cheap.
+            order.sort((a, b) => nodes[b].d - nodes[a].d)
+            for (let k = 0; k < order.length; k += 1) {
+                const n = nodes[order[k]]
+                // Clamped: rotation can push a near node past s = 1.5, and an rgba() alpha
+                // above 1 is not a value every browser agrees to parse.
+                let alpha = Math.min(1, 0.18 + 0.55 * n.s)
                 let radius = n.r * n.s
 
                 if (pointerActive) {
@@ -332,15 +411,16 @@ const HeroCanvas = ({ className }) =>
             // Only treat the pointer as present while it is actually over the hero.
             pointerActive =
                 pointerY >= 0 && pointerY <= height && pointerX >= 0 && pointerX <= width
-            targetX = (pointerX - width / 2) * -PARALLAX
-            targetY = (pointerY - height / 2) * -PARALLAX
+            // Turn toward the pointer: whichever side it is on comes forward.
+            targetYaw = ((pointerX - width / 2) / Math.max(width / 2, 1)) * maxYaw
+            targetPitch = ((pointerY - height / 2) / Math.max(height / 2, 1)) * maxPitch
         }
 
         const onPointerLeave = () =>
         {
             pointerActive = false
-            targetX = 0
-            targetY = 0
+            targetYaw = 0
+            targetPitch = 0
         }
 
         const onVisibility = () => (document.hidden ? stop() : start())
