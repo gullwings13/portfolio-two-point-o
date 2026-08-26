@@ -39,8 +39,13 @@ module.exports = {
         icon: `src/images/favicon.png`, // This path is relative to the root of the site.
       },
     },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    `gatsby-plugin-offline`,
+    // gatsby-plugin-offline was REMOVED deliberately -- do not add it back.
+    // Its service worker served /page-data/sq/d/<queryhash>.json StaleWhileRevalidate,
+    // and that filename hashes the QUERY TEXT, not the results -- so the URL is stable
+    // across builds while its contents change every deploy. A returning visitor got the
+    // new content-hashed JS bundle (new projectlist) paired with the PREVIOUS build's
+    // image manifest, so any newly added image found no node, projectImage returned
+    // null, and the card showed its bare pink backing. gatsby-browser.js unregisters
+    // the workers that are still installed out there.
   ],
 }
