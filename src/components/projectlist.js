@@ -18,6 +18,15 @@ export const projects = [
     //     livesite: "https://play.google.com/store/apps/details?id=com.ehsani.drivingapp&hl=en_US&gl=US"
     // },
     {
+        title: "Surreal Diamond",
+        image: "fantasy2.png",
+        description: "Surreal baseball run on real MLB and WNBA box scores. Field a lineup before the day's games, then a nightly cron scores what those athletes actually did into a narrated, inning-by-inning game.",
+        tags: ["node", "vite", "hono", "fullstack", "game", "solo"],
+        filters: ["fullstack"],
+        github: null,
+        livesite: "https://surreal-diamond.vercel.app/"
+    },
+    {
         title: "Gro.lol",
         image: "grolol.png",
         description: "Personal homepage builder at gro.lol/yourname. Sign up, add your links, pick a theme, publish in under 60 seconds.",
