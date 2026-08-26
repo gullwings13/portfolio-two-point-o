@@ -22,8 +22,8 @@ export const projects = [
         // Captured from the running game (the Collection gallery, one card per rarity
         // tier). Animated, so it bypasses gatsby-plugin-sharp -- see ProjectMedia.
         media: { src: "/fantasy2.webp", still: "/fantasy2-still.webp" },
-        description: "Surreal baseball run on real MLB and WNBA box scores. Field a lineup before the day's games, then a nightly cron scores what those athletes actually did into a narrated, inning-by-inning game.",
-        tags: ["node", "vite", "hono", "fullstack", "game", "solo"],
+        description: "Real MLB and WNBA box scores drive a nightly baseball sim. Lineups lock before first pitch; a cron scores the day and narrates it inning by inning.",
+        tags: ["node", "hono", "google-oauth", "posthog", "fullstack", "solo"],
         filters: ["fullstack"],
         github: null,
         livesite: "https://surreal-diamond.vercel.app/"
@@ -31,7 +31,7 @@ export const projects = [
     {
         title: "Gro.lol",
         image: "grolol.png",
-        description: "Personal homepage builder at gro.lol/yourname. Sign up, add your links, pick a theme, publish in under 60 seconds.",
+        description: "Rails + React link-in-bio SaaS. Sign up, add links, pick a theme, and your page is live at gro.lol/yourname in under 60 seconds. Auth, theming, solo build.",
         tags: ["rails", "react", "tailwindcss", "fullstack", "solo"],
         filters: ["fullstack"],
         github: null,
@@ -40,7 +40,7 @@ export const projects = [
     {
         title: "Sobreviventes do Castelo (SDC)",
         image: "sdc.png",
-        description: "Unity 2D horde survivor featuring object pooling, stat driven weapons, wave-based enemy spawning, and event-driven achievements. Architected to move fast.",
+        description: "Unity 2D horde survivor built for throughput: pooled spawns, data-driven weapon stats, wave scheduling, and an event bus that decouples achievements.",
         tags: ["unity", "game", "work in progress", "team"],
         filters: ["unity/c#"],
         github: null,
@@ -49,7 +49,7 @@ export const projects = [
     {
         title: "Music Videos!",
         image: "musicvisualization.png",
-        description: "Music videos powered by custom Unity visuals. Procedural swarms and dynamic spectrum visuals.",
+        description: "Music videos rendered from custom Unity systems — procedural swarms and visuals driven live off the track's audio spectrum.",
         tags: ["unity", "procedural", "music video", "solo"],
         filters: ["unity/c#"],
         github: null,
@@ -58,7 +58,7 @@ export const projects = [
     {
         title: "The Squire",
         image: "thesquire.png",
-        description: "Led a four-person team to second place, collaborating on ideation, prototyping, and production. Executed as team lead/producer and lead programmer.",
+        description: "Led a five-person team to a second-place finish. Owned scope and production as producer while writing the gameplay code as lead programmer.",
         tags: ["unity", "game", "team"],
         filters: ["unity/c#"],
         github: null,
@@ -67,7 +67,7 @@ export const projects = [
     {
         title: "Polymino Gardens",
         image: "polyminogardens.png",
-        description: "Tile base pattern matching puzzle game with an animated UI, object pooling and procedural gardens.",
+        description: "Polyomino tile-matching puzzler with procedurally generated gardens, a fully animated UI, and pooled tiles to keep allocation flat.",
         tags: ["unity", "procedural", "game", "solo"],
         filters: ["unity/c#"],
         github: null,
@@ -76,7 +76,7 @@ export const projects = [
     {
         title: "Orbital Simulation",
         image: "orbital.png",
-        description: "Orbital simulation toy using Unity DOTS/ECS and Unity cloud build. Supports hundreds of thousands of orbiting bodies.",
+        description: "N-body orbital toy in Unity DOTS/ECS running hundreds of thousands of bodies at interactive framerate. Shipped via Unity Cloud Build.",
         tags: ["unity", "ECS/DOTS", "toy", "solo"],
         filters: ["unity/c#"],
         github: "https://github.com/gullwings13/legendary-octo-guacamole",
@@ -85,7 +85,7 @@ export const projects = [
     {
         title: "VR Prototype",
         image: "vrprototype.png",
-        description: "This VR prototype explores different firing mechanics. Incorporating steam VR API.",
+        description: "SteamVR prototype benchmarking firing mechanics against each other to find what actually reads as good in a headset.",
         tags: ["unity", "vr", "game", "solo"],
         filters: ["unity/c#"],
         github: null,
@@ -94,7 +94,7 @@ export const projects = [
     {
         title: "Space Jump Fun",
         image: "spacejumpfun.png",
-        description: "A casual 2d platformer using c# interfaces and floaty jumping physics.",
+        description: "2D platformer built on C# interfaces so movement, hazards and pickups stay swappable. Tuned around deliberately floaty jump physics.",
         tags: ["unity", "interfaces", "game", "solo"],
         filters: ["unity/c#"],
         github: null,
@@ -130,7 +130,7 @@ export const projects = [
     {
         title: "Fetch",
         image: "fetch.png",
-        description: "Internal company directory with realtime chat. 🏆 May 2020 GA / DataDog Hackathon winning team of 5.",
+        description: "Internal company directory with realtime chat. 🏆 Winning entry, May 2020 GA/DataDog hackathon — team of five, Rails API and React client.",
         tags: ["react", "javascript", "tailwindcss", "rubyonrails", "team"],
         filters: ["fullstack"],
         github: "https://github.com/ehighberg/fetch",
@@ -139,7 +139,7 @@ export const projects = [
     {
         title: "Multiverse Trading Game",
         image: "rmtradinggame.png",
-        description: "Trade exotic goods while you explore the Multiverse in this React Single Page App.",
+        description: "React single-page trading sim: hop between worlds, buy exotic goods low, sell into the spread. Client-side state over a REST API.",
         tags: ["react", "javascript", "css", "restfulapi", "solo"],
         filters: ["frontend"],
         github: "https://github.com/gullwings13/rm-trading-game",
@@ -148,7 +148,7 @@ export const projects = [
     {
         title: "Tic Tac Toe",
         image: "tictactoe.png",
-        description: "Tic tac toe featuring multiplayer and recursive minimax AI algorithm.",
+        description: "Tic tac toe with local multiplayer and an unbeatable AI — recursive minimax searching the full game tree.",
         tags: ["javascript", "css", "ai", "solo"],
         filters: ["frontend"],
         github: "https://github.com/gullwings13/tic-tac-toe",
@@ -166,7 +166,7 @@ export const projects = [
     {
         title: "Paprika.Studio",
         image: "paprikastudio.png",
-        description: "Custom Gatsby static markdown blog with automatic dark-theme CSS.",
+        description: "Custom Gatsby blog that builds pages straight from markdown at compile time, with an automatic dark theme.",
         tags: ["gatsby", "react", "javascript", "solo"],
         filters: ["frontend"],
         github: null,
@@ -214,7 +214,7 @@ export const projects = [
     {
         title: "Portfolio",
         image: "portfolio.png",
-        description: "Performant Gatsby.js static site featuring video/three.js landing and dynamic project filtering. You are here right now!",
+        description: "The site you're on. Gatsby static build, GraphQL image pipeline emitting responsive WebP, and client-side project filtering.",
         tags: ["gatsby", "javascript", "tailwindcss", "graphql", "solo"],
         filters: ["frontend"],
         github: "https://github.com/gullwings13/portfolio-two-point-o",
