@@ -25,7 +25,7 @@ const Header = () =>
 
         <button
           type="button"
-          className="reelToggle link-pink font-mono"
+          className="reelToggle link-pink font-serif"
           onClick={() => setShowReel(shown => !shown)}
         >
           {showReel ? 'Close reel' : 'Demo reel'}
