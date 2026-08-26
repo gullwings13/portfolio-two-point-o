@@ -47,7 +47,7 @@ const Header = () =>
             </div>
           </h1>
           <h2 className="slide-in-from-top mt-2">
-            <span className="font-serif font-thin text-xl sm:text-2xl md:text-4xl mt-1 md:p-4 md:pt-1 bg-gray-900">Software Engineer &amp; Gameplay Programmer</span>
+            <span className="font-serif font-thin text-xl sm:text-2xl md:text-4xl mt-1 md:p-4 md:pt-1 bg-gray-900">Software Engineer · Full-Stack &amp; Internal Tooling</span>
           </h2>
         </div>
       </header>
