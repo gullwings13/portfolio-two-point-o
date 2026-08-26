@@ -13,7 +13,7 @@ const IndexPage = () => (
         <span className="font-mono text-xl sm:text-2xl md:text-3xl bg-white text-black p-1">About Me</span>
       </div>
       <p className="mt-4 text-justify ">
-        <span className="font-bold">Hi!</span> I’m a caring and imaginative engineer with over 20 years of experience solving hard technical problems. After a decade designing and implementing high-reliability Cisco networks, I moved into customer-facing SaaS and full-stack development. I build scripts to bridge product gaps, web apps, and indie games (C#, Unity, DOTS), with a passion for clean code and collaborative design. Whether it's squashing obscure bugs, walking a customer through a tricky integration, or making something cool, I’m ready to contribute.
+        I’m a software engineer who came up through enterprise networking and moved into full-stack development. At HackerRank I build CLI and Google Sheets tooling in JavaScript, Apps Script and Ruby that made solution delivery several times faster, and I’m the technical point of contact for Fortune 500 accounts including Google, Uber and JPMC. Outside work I ship my own things end to end. Gro.lol went from empty repo to a live Rails and React product in about a week, and Surreal Diamond runs a Hono API instrumented with Sentry, PostHog and an admin dashboard. I like the problems where the fix is buried somewhere unglamorous, and I like shipping the result.
       </p>
 
     </div >
