@@ -13,7 +13,7 @@ const IndexPage = () => (
         <span className="font-mono text-xl sm:text-2xl md:text-3xl bg-white text-black p-1">About Me</span>
       </div>
       <p className="mt-4 text-justify ">
-        I’m a software engineer who came up through enterprise networking and moved into full-stack development. At HackerRank I build CLI and Google Sheets tooling in JavaScript, Apps Script and Ruby that made solution delivery several times faster, and I’m the technical point of contact for Fortune 500 accounts including Google, Uber and JPMC. Outside work I ship my own things end to end. Gro.lol went from empty repo to a live Rails and React product in about a week, and Surreal Diamond runs a Hono API instrumented with Sentry, PostHog and an admin dashboard. I like the problems where the fix is buried somewhere unglamorous, and I like shipping the result.
+        I like to build things for fun. Mostly games, almost always software, but sometimes clay figure sculpture or music videos. Lately that means Gro.lol, Surreal Diamond, simulations, and small tools built because nothing quite did what I wanted. Building with AI feels like a superpower. Ideas that used to get filed under someday are just Saturday now.
       </p>
 
     </div >
