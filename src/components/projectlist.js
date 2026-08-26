@@ -20,6 +20,7 @@ export const projects = [
     {
         title: "Surreal Diamond",
         image: "fantasy2.png",
+        animation: "surreal-diamond",
         description: "Surreal baseball run on real MLB and WNBA box scores. Field a lineup before the day's games, then a nightly cron scores what those athletes actually did into a narrated, inning-by-inning game.",
         tags: ["node", "vite", "hono", "fullstack", "game", "solo"],
         filters: ["fullstack"],
