@@ -18,6 +18,24 @@ export const projects = [
     //     livesite: "https://play.google.com/store/apps/details?id=com.ehsani.drivingapp&hl=en_US&gl=US"
     // },
     {
+        title: "PacketParty",
+        image: "packetparty.png",
+        description: "Multiplayer backend for web games that works with any engine. Authoritative rooms speak a binary delta protocol behind sticky edge gateways, live on GKE.",
+        tags: ["typescript", "websockets", "kubernetes", "gke", "prometheus", "solo"],
+        filters: ["fullstack"],
+        github: null,
+        livesite: "https://packetparty.gro.lol/viz/"
+    },
+    {
+        title: "PaintFight",
+        image: "paintfight.png",
+        description: "Four-team 3D paint shooter for up to 24 players, built on PacketParty. The server decides every hit, and each client receives about 15 KB/s.",
+        tags: ["three.js", "typescript", "multiplayer", "game", "solo"],
+        filters: ["fullstack"],
+        github: null,
+        livesite: "https://packetparty.gro.lol/"
+    },
+    {
         title: "Surreal Diamond",
         // Captured from the running game (the Collection gallery, one card per rarity
         // tier). Animated, so it bypasses gatsby-plugin-sharp -- see ProjectMedia.
